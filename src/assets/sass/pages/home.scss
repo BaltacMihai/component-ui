@@ -1,4 +1,5 @@
 @use "./../base/variables.scss" as *;
+@use "./../base/response.scss" as *;
 
 .page_home {
   margin-top: 5rem;
@@ -8,6 +9,11 @@
         font-size: $fs-subtitle;
         font-weight: lighter;
         margin: 1rem 0;
+
+        @include phone {
+          width: 80%;
+          text-align: center;
+        }
       }
 
       .cta {

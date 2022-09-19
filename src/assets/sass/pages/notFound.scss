@@ -1,15 +1,32 @@
 @use "./../base/variables.scss" as *;
+@use "./../base/response.scss" as *;
 
 .page_pageNotFound {
+  @include phone {
+    margin-top: 5rem;
+  }
   .options {
     display: flex;
     margin: 2rem 0;
 
     width: 25%;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      width: auto;
+      > * {
+        margin: 1rem 0;
+      }
+    }
   }
 
   img {
     margin: 5vh 0;
+
+    @include phone {
+      margin: 5vh 0;
+      width: 60vw;
+    }
   }
 }

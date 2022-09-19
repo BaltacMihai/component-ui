@@ -3,6 +3,7 @@
 %btn-common {
   border-radius: $border-radius-10;
   padding: 1rem 2rem;
+
   &:hover {
     filter: brightness(90%);
   }
@@ -11,7 +12,7 @@
 .btn-primary {
   @extend %btn-common;
 
-  color: $cl-white;
+  color: $cl-white !important;
   background-color: $cl-primary;
 }
 
