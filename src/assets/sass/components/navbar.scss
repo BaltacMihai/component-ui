@@ -1,0 +1,54 @@
+@use "./../base/variables.scss" as *;
+
+$layout-padding: 1rem $layout-margin;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $cl-white;
+
+  width: calc(100% - $layout-margin * 2);
+  padding: $layout-padding;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    &_image {
+      width: 40px;
+      height: 40px;
+    }
+    &_title {
+      color: $cl-primary;
+      font-size: $fs-subtitle;
+      text-decoration: none;
+      font-weight: bold;
+      padding-left: 1rem;
+    }
+  }
+
+  .wrapper {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .items {
+      color: black;
+      font-size: $fs-content;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        color: $cl-primary;
+        padding-bottom: calc(0.5rem - 3px);
+        border-bottom: 3px solid $cl-primary;
+      }
+    }
+
+    .btn-primary {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
