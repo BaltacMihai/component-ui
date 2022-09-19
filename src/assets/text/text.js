@@ -22,5 +22,12 @@ export const text = {
       subtitle: "Learn how to build and how to make it look good",
       cta: "View Guides",
     },
+
+    notFound: {
+      title:
+        "Currently this page has no content, feel free to leave a suggestion or to contribute.",
+      contribute: "Contribute",
+      homepage: "Homepage",
+    },
   },
 };

@@ -4,16 +4,6 @@
   margin-top: 5rem;
   section {
     .wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-
-      .title {
-        font-size: $fs-title;
-        color: $cl-primary;
-        font-weight: bold;
-      }
       .subtitle {
         font-size: $fs-subtitle;
         font-weight: lighter;

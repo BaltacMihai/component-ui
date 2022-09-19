@@ -1,0 +1,15 @@
+@use "./../base/variables.scss" as *;
+
+.page_pageNotFound {
+  .options {
+    display: flex;
+    margin: 2rem 0;
+
+    width: 25%;
+    justify-content: space-between;
+  }
+
+  img {
+    margin: 5vh 0;
+  }
+}

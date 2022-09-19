@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { text } from "../assets/text/text";
 import logo from "./../assets/images/icon.svg";
 
 function Navbar() {
   return (
     <div className="navbar">
-      <a href="#" className="logo">
+      <Link to="/" className="logo">
         <img src={logo} alt="logo" className="logo_image" />
         <p className="logo_title">{text.navbar.logoTitle}</p>
-      </a>
+      </Link>
       <div className="wrapper">
         <a href="#" className="items">
           {text.navbar.guides}
