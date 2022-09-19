@@ -1,4 +1,5 @@
 import React from "react";
+import { DONATION_LINK } from "../assets/data/donation";
 import { text } from "../assets/text/text";
 import logo from "./../assets/images/icon.svg";
 
@@ -27,7 +28,7 @@ function Footer() {
           <a href="#" className="items">
             {text.footer.termsUse}
           </a>
-          <a href="#" className="items">
+          <a href={DONATION_LINK} className="items">
             {text.footer.contribute}
           </a>
         </div>

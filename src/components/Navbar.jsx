@@ -4,6 +4,7 @@ import { text } from "../assets/text/text";
 import logo from "./../assets/images/icon.svg";
 import hamburgerMenu from "./../assets/icons/hamburger.svg";
 import closeMenu from "./../assets/icons/close.svg";
+import { DONATION_LINK } from "../assets/data/donation";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState("false");
@@ -28,7 +29,7 @@ function Navbar() {
           <a href="#" className="items">
             {text.navbar.about}
           </a>
-          <a href="#" className="items btn-primary">
+          <a href={DONATION_LINK} className="items btn-primary">
             {text.navbar.contribute}
           </a>
 
@@ -71,7 +72,7 @@ function Navbar() {
           <a href="#" className="items">
             {text.navbar.about}
           </a>
-          <a href="#" className="items">
+          <a href={DONATION_LINK} className="items">
             {text.navbar.contribute}
           </a>
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { DONATION_LINK } from "../assets/data/donation";
 import { text } from "../assets/text/text";
 
 import underConstructionIMG from "./../assets/images/underConstruction.svg";
@@ -9,7 +10,7 @@ function NotFound() {
       <div className="wrapper">
         <h1 className="title">{text.page.notFound.title}</h1>
         <div className="options">
-          <a href="#" className="btn-secondaty">
+          <a href={DONATION_LINK} className="btn-secondaty">
             {text.page.notFound.contribute}
           </a>
           <Link to="/" className="btn-primary">
