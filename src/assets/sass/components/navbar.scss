@@ -53,6 +53,7 @@ $layout-padding: 1rem $layout-margin;
       font-size: $fs-content;
       padding: 0.5rem 1rem;
 
+      &-active,
       &:hover {
         color: $cl-primary;
         padding-bottom: calc(0.5rem - 3px);

@@ -29,5 +29,8 @@ export const text = {
       contribute: "Contribute",
       homepage: "Homepage",
     },
+    paths: {
+      title: " All Paths",
+    },
   },
 };

@@ -1,0 +1,15 @@
+@use "./../base/variables.scss" as *;
+@use "./../base/response.scss" as *;
+
+.page_paths {
+  min-height: 80vh;
+
+  .subtitle {
+    padding: 1rem;
+    font-size: $fs-subtitle;
+  }
+
+  .path-card {
+    margin: 1rem 0;
+  }
+}

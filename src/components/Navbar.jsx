@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { text } from "../assets/text/text";
 import logo from "./../assets/images/icon.svg";
 import hamburgerMenu from "./../assets/icons/hamburger.svg";
@@ -8,6 +8,10 @@ import { DONATION_LINK } from "../assets/data/donation";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState("false");
+  // const location = useLocation();
+  // const currentElement = document.getElementById(location.pathname);
+
+  // currentElement?.classList.add("items-active");
 
   if (openMenu)
     return (
@@ -20,9 +24,9 @@ function Navbar() {
           <a href="#" className="items">
             {text.navbar.guides}
           </a>
-          <a href="#" className="items">
+          <Link to="/paths" className="items" id="/paths">
             {text.navbar.paths}
-          </a>
+          </Link>
           <a href="#" className="items">
             {text.navbar.resources}
           </a>
