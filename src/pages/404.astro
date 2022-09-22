@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import underConstructionIMG from "./../assets/images/underConstruction.svg";
+import { DONATION_LINK } from "../assets/data/donation";
+
+const text = {
+  title:
+    "Currently this page has no content, feel free to leave a suggestion or to contribute.",
+  contribute: "Contribute",
+  homepage: "Homepage",
+};
+---
+
+<Layout title="Not found">
+  <div class="page page_pageNotFound">
+    <div class="wrapper">
+      <h1 class="title">{text.title}</h1>
+      <div class="options">
+        <a href={DONATION_LINK} class="btn-secondaty">
+          {text.contribute}
+        </a>
+        <a href="/" class="btn-primary">
+          {text.homepage}
+        </a>
+      </div>
+    </div>
+    <img src={underConstructionIMG} alt="underConstructionIMG" />
+  </div>
+</Layout>

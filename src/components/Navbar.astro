@@ -1,0 +1,38 @@
+---
+import logo from "./../assets/images/icon.svg";
+import { DONATION_LINK } from "../assets/data/donation";
+import { URL } from "../assets/data/url";
+
+const text = {
+  logoTitle: "Component UI",
+  guides: "Guides",
+  paths: "Paths",
+  resources: "Resources",
+  about: "About",
+  contribute: "Contribute",
+};
+---
+
+<div class="navbar">
+  <a href={URL} class="logo">
+    <img src={logo} alt="logo" class="logo_image" />
+    <p class="logo_title">{text.logoTitle}</p>
+  </a>
+  <div class="wrapper">
+    <a href="#" class="items">
+      {text.guides}
+    </a>
+    <a href={URL + "paths"} class="items">
+      {text.paths}
+    </a>
+    <a href="#" class="items">
+      {text.resources}
+    </a>
+    <a href="#" class="items">
+      {text.about}
+    </a>
+    <a href={DONATION_LINK} class="items btn-primary">
+      {text.contribute}
+    </a>
+  </div>
+</div>

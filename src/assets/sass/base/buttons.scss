@@ -1,0 +1,24 @@
+@use "./../base/variables.scss" as *;
+
+%btn-common {
+  border-radius: $border-radius-10;
+  padding: 1rem 2rem;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.btn-primary {
+  @extend %btn-common;
+
+  color: $cl-white !important;
+  background-color: $cl-primary;
+}
+
+.btn-secondaty {
+  @extend %btn-common;
+
+  color: $cl-primary;
+  border: 2px solid $cl-primary;
+}

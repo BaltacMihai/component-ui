@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import PathCard from "../components/PathCard.astro";
+
+const text = {
+  title: " All Paths",
+};
+---
+
+<Layout
+  ><div class="page page_paths">
+    <div class="wrapper">
+      <h1 class="title">{text.title}</h1>
+
+      <PathCard />
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import illustration from "../assets/images/homepage_illustrations.svg";
+
+const text = {
+  title: "The one UI&UX Guide",
+  subtitle: "Learn how to build and how to make it look good",
+  cta: "View Guides",
+};
+---
+
+<Layout>
+  <div class="page page_home">
+    <section>
+      <div class="wrapper">
+        <h1 class="title">{text.title}</h1>
+        <h2 class="subtitle">{text.subtitle}</h2>
+        <a href="#" class="cta btn-primary">
+          {text.cta}
+        </a>
+      </div>
+
+      <img
+        src={illustration}
+        alt="Homepage illustration"
+        class="illustration"
+      />
+    </section>
+  </div>
+</Layout>

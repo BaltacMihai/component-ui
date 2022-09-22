@@ -1,0 +1,103 @@
+@use "./../base/variables.scss" as *;
+@use "./../base/response.scss" as *;
+
+$layout-padding: 1rem $layout-margin;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $cl-white;
+
+  width: calc(100% - $layout-margin * 2);
+  padding: $layout-padding;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    &_image {
+      width: 40px;
+      height: 40px;
+    }
+    &_title {
+      color: $cl-primary;
+      font-size: $fs-subtitle;
+      text-decoration: none;
+      font-weight: bold;
+      padding-left: 1rem;
+
+      @include phone {
+        display: none;
+      }
+    }
+  }
+
+  .wrapper {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include phone {
+      justify-content: flex-end;
+    }
+
+    .items {
+      color: black;
+      font-size: $fs-content;
+      padding: 0.5rem 1rem;
+
+      &-active,
+      &:hover {
+        color: $cl-primary;
+        padding-bottom: calc(0.5rem - 3px);
+        border-bottom: 3px solid $cl-primary;
+      }
+      @include phone {
+        display: none;
+      }
+    }
+
+    .btn-primary {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  .menu {
+    display: none;
+    cursor: pointer;
+    @include phone {
+      display: flex;
+    }
+  }
+
+  &_open {
+    @include phone {
+      height: 90vh;
+      flex-direction: column;
+      position: absolute;
+      margin-top: -9vh;
+      justify-content: initial;
+    }
+    .wrapper {
+      @include phone {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+    .menuItems {
+      display: flex;
+      flex-direction: column;
+      height: 60vh;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10vh;
+    }
+  }
+}
