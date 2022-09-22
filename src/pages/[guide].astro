@@ -18,7 +18,52 @@ const { Content, frontmatter } = Astro.props.guide;
 ---
 
 <Layout title={frontmatter.title}>
-  <h1>{frontmatter.title}</h1>
+  <div class="guide-page">
+    <div class="row">
+      <img
+        src={frontmatter.icon}
+        alt={frontmatter.title + " icon"}
+        class="icon"
+      />
+      <div class="col">
+        <h1 class="title">{frontmatter.title}</h1>
+        <h3>Guide</h3>
+        <p>{frontmatter.excerpt}</p>
+      </div>
+    </div>
 
-  <Content />
+    <div class="content">
+      <Content />
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .guide-page {
+    padding: 1rem 10%;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  .icon {
+    width: 200px;
+  }
+  .title {
+    color: #5d60ef;
+  }
+
+  .content {
+    width: 70%;
+    padding: 1rem 40px;
+  }
+
+  .aside {
+    padding: fixed;
+  }
+
+  .content img {
+    width: 200px;
+    margin: 0 auto;
+  }
+</style>
