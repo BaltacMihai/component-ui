@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { URL } from "../assets/data/url";
+import GuideCard from "../components/GuideCard.astro";
 
 const text = {
   title: "Guides",
@@ -13,14 +14,27 @@ const guides = await Astro.glob("../guides/*.md");
   ><div class="page page_paths">
     <div class="wrapper">
       <h1 class="title">{text.title}</h1>
-
-      {
-        guides?.map(guide => (
-          <h2>{guide.frontmatter.title}</h2>
-          <p>{guide.frontmatter.excerpt}</p>
-          <a class="btn-secondary" href={URL + guide.frontmatter.guide}>Read More</a>
-        ))
-      }
+      <div class="row">
+        {
+          guides?.map((guide) => (
+            <GuideCard
+              title={guide.frontmatter.title}
+              description={guide.frontmatter.excerpt}
+              icon={guide.frontmatter.icon}
+              link={guide.frontmatter.guide}
+            />
+          ))
+        }
+      </div>
     </div>
   </div>
 </Layout>
+
+<style>
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content
+  }
+</style>

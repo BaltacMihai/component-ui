@@ -1,0 +1,40 @@
+@use "./../base/variables.scss" as *;
+@use "./../base/response.scss" as *;
+
+.guide-card {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: $border-radius-20;
+  padding: 2rem;
+
+  width: 20vw;
+
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+  align-items: center;
+
+  .icon {
+    $size: 150px;
+    width: $size;
+  }
+
+  .type {
+    color: $cl-primary;
+    font-size: $fs-content;
+  }
+  .subtitle {
+    padding: 1rem 0 !important;
+  }
+  .description {
+    font-size: $fs-content;
+    margin-bottom: 2rem;
+  }
+
+  .btn-secondary {
+    margin-bottom: 2rem;
+  }
+}
