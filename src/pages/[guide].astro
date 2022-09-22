@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { URL } from "../assets/data/url";
 
 export async function getStaticPaths() {
   const guides = await Astro.glob("../guides/*.md");
