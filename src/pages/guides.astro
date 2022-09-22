@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { URL } from "../assets/data/url";
+
+const text = {
+  title: "Guides",
+};
+
+const guides = await Astro.glob("../guides/*.md");
+---
+
+<Layout
+  ><div class="page page_paths">
+    <div class="wrapper">
+      <h1 class="title">{text.title}</h1>
+
+      {
+        guides?.map(guide => (
+          <h2>{guide.frontmatter.title}</h2>
+          <p>{guide.frontmatter.excerpt}</p>
+          <a class="btn-secondary" href={URL + guide.frontmatter.guide}>Read More</a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

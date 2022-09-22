@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { URL } from "../assets/data/url";
 
 import illustration from "../assets/images/homepage_illustrations.svg";
 
@@ -16,7 +17,7 @@ const text = {
       <div class="wrapper">
         <h1 class="title">{text.title}</h1>
         <h2 class="subtitle">{text.subtitle}</h2>
-        <a href="#" class="cta btn-primary">
+        <a href={URL + "guides"} class="cta btn-primary">
           {text.cta}
         </a>
       </div>

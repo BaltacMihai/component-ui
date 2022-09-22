@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const guides = await Astro.glob("../guides/*.md");
+
+  return guides.map((guide) => ({
+    params: {
+      guide: guide.frontmatter.guide,
+    },
+    props: {
+      guide,
+    },
+  }));
+}
+
+const { Content, frontmatter } = Astro.props.guide;
+---
+
+<Layout title={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+
+  <Content />
+</Layout>
