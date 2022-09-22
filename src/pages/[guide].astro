@@ -21,7 +21,7 @@ const { Content, frontmatter } = Astro.props.guide;
   <div class="guide-page">
     <div class="row">
       <img
-        src={frontmatter.icon}
+        src={URL + frontmatter.icon}
         alt={frontmatter.title + " icon"}
         class="icon"
       />
