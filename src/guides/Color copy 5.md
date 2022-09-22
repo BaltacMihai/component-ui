@@ -24,23 +24,15 @@ You could think of color harmonies as the building blocks or the underlying temp
 
 <b>Analogous = </b> colors that are next to each other on the color wheel (This color harmony creates low color contrast)
 
-<img src="./analogous.svg"/>
+<img src="./componentui/analogous.svg"/>
 
 <b>Complementary = </b> colors that are opposite on the color wheel, which produce higj color contrast.
 
-<img src="./complementary.svg"/>
-
 <b>Split-complementary = </b> a color combined with others from either side of its complementary color.
-
-<img src="./Split-complementary.svg"/>
 
 <b>Tridic = </b> three equidistant colors ( 120 degrees apart) on the color wheel.
 
-<img src="./Tridic.svg"/>
-
 <b>Monochromatic = </b> tones and shades of a single hue
-
-<img src="./Monochromatic.svg"/>
 
 </section>
 
