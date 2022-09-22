@@ -1,7 +1,7 @@
 ---
 title: Color
 guide: color
-excerpt: About colors, why we use them, how we use them, how we should and what we should do with them.
+excerpt: Colors, why we use them, how we should utilize them, and what we should do with them.
 icon: color.svg
 ---
 
@@ -21,19 +21,15 @@ icon: color.svg
   <h2> What are colors?</h2>
   <br>
   <p>
-    Color is one of the most influential tools we have as designers, whether we're visual designers or not. And it has
-    the power to do a lot of things for us. It can set a brand's tone and draw users' attention. But it can be tricky to
-    find the right combination of colors and then applying those colors to your design
+    Color is one of the most powerful tools we have as designers, whether we are UI desingers or not. And it has the ability to perform a variety of things for us. It may establish the tone for a brand and attract people' attention. However, finding the appropriate color combination and then applying those colors to your design might be difficult.
   </p>
   <p>
   </p>
   <p>
-    So, how can you use colors to enhance your design?
+  So, how can you include color into your design?
   </p>
   <p>
-    The choice of a color pallette and its application to a design are not mere happy accidents. It takes iteration and
-    carefull application to really benefit and take full advantage of a color in a UI. Appropriate color use can enhance
-    brand perception, draw attention and encourage interactions, impact users' emtions, and icrease usability
+   The selection of a color palette and its application to a design are not coincidental. Iteration and careful application are required to fully benefit from and take use of a color in a UI. Color may improve brand impression, capture attention and stimulate interactions, influence user emotions, and increase usability.
   </p>
 </section>
 <br>
@@ -43,8 +39,7 @@ icon: color.svg
   <h2> Choose a color harmony </h2>
   <br>
   <p>
-    You could think of color harmonies as the building blocks or the underlying template of a color pallette. Some
-    common color harmonies are:
+   Color harmonies can be viewed as the foundational elements or basic design of a color palette. Typical color harmonies include:
   </p>
   <p>
     <b>Analogous = </b> colors that are next to each other on the color wheel (This color harmony creates low color
@@ -79,13 +74,13 @@ icon: color.svg
 <section id="s3">
   <h2> Limit your palette to three colors</h2>
   <p>
-    A small number of colors reinforces visual hierarcgy and contrast because there is less for users to consider and
-    get distracted by.
+   Because there are fewer colors to ponder and be distracted by, fewer colors enhance visual hierarchy and contrast.
   </p>
+
   <p>
-    For example, have you ever had a hard time finding a specific cereal in the cereal asle? That's because there are so
-    many colors! All the colors are competing for your attention.
+   Have you ever struggled to locate a particular cereal in the cereal aisle, for instance? That is as a result of the abundance of colors! Every color is fighting for your attention.
   </p>
+     <img src="/componentui/market.jpg"  style="width: 500px;"/>
   <p>
     The same is true for your designs.</p>
   <p>
@@ -97,25 +92,24 @@ icon: color.svg
 <section id="s4">
   <h2> The 60 - 30 -10 rule</h2>
   <p>
-    This rule means that color should be used in 60%, 30%, and 10%. So in other words, use 60% for the dominant color,
-    30% for the seconday color, and 10% for an accent color.
+   According to this rule, color should be used 60%, 30%, and 10% of the time. Use 60% for the dominant color, 30% for the secondary color, and 10% for the accent color, in other words.
   </p>
+    <img src="/componentui/img-60-30-10.svg"  style="width: 750px;"/>
   <p>
-    This is a way of thinking, because you can't count how much of a color do you use.
+  This is more like a style of thinking because it's impossible to quantify the amount of color you utilize.
   </p>
 </section>
 <br><br>
 <section id="s5">
   <h2> Apply then iterate your colors</h2>
   <p>
-    Once you've used the 60 - 30 - 10 rule, you'll need to take a step back and see what's working and what's not, then
-    tweak your colors. Ask yourself questions like, do your color choice help create the right visual hierarchy?
+  After applying the 60-30-10 guideline, you'll need to step back and assess what's working and what isn't before making adjustments to your color scheme. Do your color choices help establish the proper visual hierarchy, for example?
 
   </p>
   <p>
-    So, in other words, is your eye drawn to these elements in the design that you want to empasize? Do your color
-    choices create balance and contrast in your design?
+   In other words, is your attention pulled to the design components you wish to emphasize? Do the colors you've chosen help your design have harmony and contrast?
   </p>
+    <img src="/componentui/iterateColors.svg"  style="width: 1000px;"/>
   <p>
     Look for contrast!
   </p>
@@ -124,9 +118,8 @@ icon: color.svg
 <section id="s6">
   <h2> Use colors consistently in your interface</h2>
   <p>
-    If you use bright pink for your calls to action one one screen, that same color should be used for calls to action
-    everywhere, unless you have a insanely good reason for deviating from that color.
-
+    If your calls to action on one screen are bright pink, you should use the same color for calls to action everywhere, unless you have an absurdly excellent reason to stray from it.
+ <img src="/componentui/colors_consistently.svg"  style="width: 1000px;"/>
   </p>
 </section>
 
