@@ -17,7 +17,7 @@ const { title, description, icon, link } = Astro.props as Props;
 ---
 
 <div class="guide-card">
-  <img src={icon} alt={title + " icon"} class="icon" />
+  <img src={URL + icon} alt={title + " icon"} class="icon" />
   <div class="details">
     <p class="type">{text.type}</p>
     <h2 class="subtitle">{title}</h2>
