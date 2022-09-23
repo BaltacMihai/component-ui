@@ -45,29 +45,29 @@ icon: color.svg
     <b>Analogous = </b> colors that are next to each other on the color wheel (This color harmony creates low color
     contrast)
   </p>
-  <img src="/componentui/analogous.svg" />
+  <img src="/componentui/color/analogous.svg" />
   <p>
     <b>Complementary = </b> colors that are opposite on the color wheel, which produce higj color contrast.
   </p>
-  <img src="/componentui/complementary.svg" />
+  <img src="/componentui/color/complementary.svg" />
   <p>
     <b> Split-complementary = </b> a color combined with others from either side of its complementary color.
 
   </p>
 
-  <img src="/componentui/Split-complementary.svg" />
+  <img src="/componentui/color/Split-complementary.svg" />
   <p>
     <b>Tridic = </b> three equidistant colors ( 120 degrees apart) on the color wheel.
 
   </p>
 
-  <img src="/componentui/Tridic.svg" />
+  <img src="/componentui/color/Tridic.svg" />
   <p>
     <b>Monochromatic = </b> tones and shades of a single hue
 
   </p>
 
-  <img src="/componentui/Monochromatic.svg" />
+  <img src="/componentui/color/Monochromatic.svg" />
 
 </section>
 <br><br>
@@ -80,7 +80,7 @@ icon: color.svg
   <p>
    Have you ever struggled to locate a particular cereal in the cereal aisle, for instance? That is as a result of the abundance of colors! Every color is fighting for your attention.
   </p>
-     <img src="/componentui/market.jpg"  style="width: 500px;"/>
+     <img src="/componentui/color/market.jpg"  style="width: 500px;"/>
   <p>
     The same is true for your designs.</p>
   <p>
@@ -94,7 +94,7 @@ icon: color.svg
   <p>
    According to this rule, color should be used 60%, 30%, and 10% of the time. Use 60% for the dominant color, 30% for the secondary color, and 10% for the accent color, in other words.
   </p>
-    <img src="/componentui/img-60-30-10.svg"  style="width: 750px;"/>
+    <img src="/componentui/color/img-60-30-10.svg"  style="width: 750px;"/>
   <p>
   This is more like a style of thinking because it's impossible to quantify the amount of color you utilize.
   </p>
@@ -109,7 +109,7 @@ icon: color.svg
   <p>
    In other words, is your attention pulled to the design components you wish to emphasize? Do the colors you've chosen help your design have harmony and contrast?
   </p>
-    <img src="/componentui/iterateColors.svg"  style="width: 1000px;"/>
+    <img src="/componentui/color/iterateColors.svg"  style="width: 1000px;"/>
   <p>
     Look for contrast!
   </p>
@@ -119,7 +119,7 @@ icon: color.svg
   <h2> Use colors consistently in your interface</h2>
   <p>
     If your calls to action on one screen are bright pink, you should use the same color for calls to action everywhere, unless you have an absurdly excellent reason to stray from it.
- <img src="/componentui/colors_consistently.svg"  style="width: 1000px;"/>
+ <img src="/componentui/color/colors_consistently.svg"  style="width: 1000px;"/>
   </p>
 </section>
 
