@@ -2,6 +2,8 @@
 import logo from "./../assets/images/icon.svg";
 import { DONATION_LINK } from "../assets/data/donation";
 import { URL } from "../assets/data/url";
+import hamburgerIcon from "./../assets/icons/hamburger.svg";
+import closeIcon from "./../assets/icons/close.svg";
 
 const text = {
   logoTitle: "Component UI",
@@ -13,12 +15,30 @@ const text = {
 };
 ---
 
+<script is:inline>
+  function myFunction() {
+    let menu = document.getElementById("navbar_wrapper");
+    let open = document.getElementById("navbar_open");
+    let close = document.getElementById("navbar_close");
+
+    if (menu.classList.contains("responsive")) {
+      menu.classList.remove("responsive");
+      close.style.display = "none";
+      open.style.display = "flex";
+    } else {
+      menu.classList.add("responsive");
+      close.style.display = "flex";
+      open.style.display = "none";
+    }
+  }
+</script>
+
 <div class="navbar">
   <a href={URL} class="logo">
     <img src={logo} alt="logo" class="logo_image" />
     <p class="logo_title">{text.logoTitle}</p>
   </a>
-  <div class="wrapper">
+  <div class="wrapper" id="navbar_wrapper">
     <a href={URL + "guides"} class="items">
       {text.guides}
     </a>
@@ -34,5 +54,14 @@ const text = {
     <a href={DONATION_LINK} class="items btn-primary">
       {text.contribute}
     </a>
+  </div>
+  <div class="responsive-icons" onclick="myFunction()">
+    <img
+      src={hamburgerIcon}
+      alt="hamburgerIcon"
+      class="open"
+      id="navbar_open"
+    />
+    <img src={closeIcon} alt="closeIcon" class="close" id="navbar_close" />
   </div>
 </div>

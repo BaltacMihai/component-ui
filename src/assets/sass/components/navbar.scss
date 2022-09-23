@@ -40,12 +40,20 @@ $layout-padding: 1rem $layout-margin;
     align-items: center;
     justify-content: space-between;
 
-    @include tablet {
-      width: 50%;
-    }
-
     @include phone {
-      justify-content: flex-end;
+      display: none;
+
+      &.responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: fixed;
+        left: 0;
+        top: 10%;
+        height: 90%;
+        width: 100%;
+        background: $white-bg;
+      }
     }
 
     .items {
@@ -59,9 +67,6 @@ $layout-padding: 1rem $layout-margin;
         padding-bottom: calc(0.5rem - 3px);
         border-bottom: 3px solid $cl-primary;
       }
-      @include phone {
-        display: none;
-      }
     }
 
     .btn-primary {
@@ -69,35 +74,15 @@ $layout-padding: 1rem $layout-margin;
     }
   }
 
-  .menu {
+  .responsive-icons {
     display: none;
     cursor: pointer;
     @include phone {
       display: flex;
     }
-  }
 
-  &_open {
-    @include phone {
-      height: 90vh;
-      flex-direction: column;
-      position: absolute;
-      margin-top: -9vh;
-      justify-content: initial;
-    }
-    .wrapper {
-      @include phone {
-        width: 100%;
-        justify-content: space-between;
-      }
-    }
-    .menuItems {
-      display: flex;
-      flex-direction: column;
-      height: 60vh;
-      justify-content: space-around;
-      align-items: center;
-      margin-top: 10vh;
+    .close {
+      display: none;
     }
   }
 }
