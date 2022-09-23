@@ -1,7 +1,7 @@
 ---
 title: Color
 guide: color
-excerpt: Colors, why we use them, how we should utilize them, and what we should do with them.
+excerpt: Color is a very significant aspect of UI design. It reflects your brand and also has psychological significance.
 icon: color.svg
 ---
 
@@ -94,10 +94,26 @@ icon: color.svg
   <p>
    According to this rule, color should be used 60%, 30%, and 10% of the time. Use 60% for the dominant color, 30% for the secondary color, and 10% for the accent color, in other words.
   </p>
-    <img src="/componentui/color/img-60-30-10.svg"  style="width: 750px;"/>
   <p>
+  The 6:3:1 color scheme, popularly know as the <b> Golden Rule</b>
+  </p>
+    <img src="/componentui/color/img-60-30-10.svg"  style="width: 750px;"/>
+<br>
+  <p>
+  
   This is more like a style of thinking because it's impossible to quantify the amount of color you utilize.
   </p>
+  <br>
+  <p>
+ The  <b>60%</b> is usually the netral or primary color. This portion will be used as the base color of the design
+  </p>
+  <p>
+  The  <b>30%</b> is the secondary color. It is still visible and will be used for some medium components such as card, carousel, etc.
+  </p>
+  <p>
+  The  <b>10%</b> is the accent color. This portion will be used for highlight of the design. For example, CTA buton, pop up, and some important points of your interface.
+  </p>
+
 </section>
 <br><br>
 <section id="s5">
