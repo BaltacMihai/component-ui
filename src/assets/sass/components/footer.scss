@@ -9,6 +9,9 @@
 
   .wrapper {
     width: 100%;
+    @include phone {
+      display: flex;
+    }
 
     @include tablet {
       justify-content: flex-start;

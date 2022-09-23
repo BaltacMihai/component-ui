@@ -40,19 +40,20 @@ $layout-padding: 1rem $layout-margin;
     align-items: center;
     justify-content: space-between;
 
-    @include phone {
+    @include tablet {
       display: none;
 
       &.responsive {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 10%;
         height: 90%;
         width: 100%;
         background: $white-bg;
+        z-index: 3;
       }
     }
 
@@ -77,7 +78,7 @@ $layout-padding: 1rem $layout-margin;
   .responsive-icons {
     display: none;
     cursor: pointer;
-    @include phone {
+    @include tablet {
       display: flex;
     }
 

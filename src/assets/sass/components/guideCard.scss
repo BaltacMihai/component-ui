@@ -10,6 +10,14 @@
 
   width: 20vw;
 
+  @include tablet {
+    width: 40vw;
+  }
+
+  @include phone {
+    width: 60vw;
+  }
+
   --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),

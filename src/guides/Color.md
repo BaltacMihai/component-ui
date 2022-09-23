@@ -130,6 +130,9 @@ icon: color.svg
     margin: 0.5rem 0;
   }
 
+img{
+  max-width: 90%;
+}
   .aside {
     position: fixed;
     right: 5%;
@@ -155,5 +158,11 @@ icon: color.svg
     background-color: #ded7fb75;
     padding: 0.5rem 1rem;
     font-weight: bold
+  }
+
+   @media (max-width: 1262px) {
+  .aside {
+    display: none;
+    }
   }
 </style>

@@ -10,6 +10,14 @@
 
   width: 50vw;
 
+  @include tablet {
+    width: 60vw;
+  }
+
+  @include phone {
+    width: 80vw;
+  }
+
   --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
@@ -20,8 +28,17 @@
     justify-content: space-between;
     align-items: center;
 
+    @include phone {
+      flex-direction: column;
+    }
+
     .identity {
       display: flex;
+
+      @include phone {
+        flex-direction: column;
+        align-items: center;
+      }
 
       .path-logo {
         width: 100px;
@@ -32,6 +49,10 @@
         flex-direction: column;
         justify-content: center;
         padding-left: 1rem;
+
+        @include phone {
+          align-items: center;
+        }
         .title {
           width: auto;
           color: black;
@@ -42,6 +63,9 @@
           font-weight: bold;
           span {
             font-weight: bolder;
+          }
+          @include phone {
+            margin: 1rem 0;
           }
         }
       }
