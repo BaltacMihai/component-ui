@@ -34,8 +34,8 @@ const {
       <li></li>
     </ul>
     <Navbar />
-    <main data-barba="container" data-barba-namespace="home"></main>
-    <slot />
+    <main data-barba="container" data-barba-namespace="home"><slot /></main>
+
     <Footer />
     <script>
       import barba from "@barba/core";
@@ -69,16 +69,15 @@ const {
 
       function delay(n) {
         n = n || 2000;
-        // Keep official documentation wording, done -> resolve
-        // and make it more concise
+
         return new Promise((resolve) => {
           setTimeout(resolve, n);
         });
       }
 
       barba.init({
-        sync: true,
-
+        debug: true,
+        sync: false,
         transitions: [
           {
             async leave(data) {
