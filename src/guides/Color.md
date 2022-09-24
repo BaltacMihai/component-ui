@@ -5,20 +5,55 @@ excerpt: Color is a very significant aspect of UI design. It reflects your brand
 icon: color.svg
 ---
 
+<script >
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+
+    );
+}
+function show(theId){
+  const element = document.querySelector('#nav_'+theId);
+  const section = document.querySelector('#'+theId);
+ 
+  if(section && element)
+
+isInViewport(section) ?
+       element.classList.add("active") :
+       element.classList.remove("active");
+}
+
+const ids = ["what_are_colors","choose_a_color_harmony","three_colors","The_60_30_10_rule","iterate_your_colors","use_colors_consistently"]
+
+document.addEventListener('scroll', function () {
+ids.forEach(one => show(one))
+
+        
+  
+
+}, {
+    passive: true
+});
+  </script>
+
 <div class="aside">
   <h2> Lesson Contents: </h2>
-  <a href="#s1"> What are colors? </a>
-  <a href="#s2"> Choose a color harmony </a>
-  <a href="#s3"> Limit your palette to three colors </a>
-  <a href="#s4"> The 60 - 30 -10 rule </a>
-  <a href="#s5"> Apply then iterate your colors</a>
-  <a href="#s6"> Use colors consistently in your interface</a>
+  <a href="#what_are_colors" id="nav_what_are_colors"> What are colors? </a>
+  <a href="#choose_a_color_harmony" id="nav_choose_a_color_harmony"> Choose a color harmony </a>
+  <a href="#three_colors" id="nav_three_colors"> Limit your palette to three colors </a>
+  <a href="#The_60_30_10_rule" id="nav_The_60_30_10_rule"> The 60 - 30 -10 rule </a>
+  <a href="#iterate_your_colors" id="nav_iterate_your_colors"> Apply then iterate your colors</a>
+  <a href="#use_colors_consistently" id="nav_use_colors_consistently"> Use colors consistently in your interface</a>
 
 </div>
 
-<section id="s1">
+<section id="what_are_colors">
 
-  <h2> What are colors?</h2>
+  <h2 > What are colors?</h2>
   <br>
   <p>
     Color is one of the most powerful tools we have as designers, whether we are UI desingers or not. And it has the ability to perform a variety of things for us. It may establish the tone for a brand and attract people' attention. However, finding the appropriate color combination and then applying those colors to your design might be difficult.
@@ -35,8 +70,8 @@ icon: color.svg
 <br>
 <br>
 
-<section id="s2">
-  <h2> Choose a color harmony </h2>
+<section id="choose_a_color_harmony">
+  <h2 > Choose a color harmony </h2>
   <br>
   <p>
    Color harmonies can be viewed as the foundational elements or basic design of a color palette. Typical color harmonies include:
@@ -47,7 +82,7 @@ icon: color.svg
   </p>
   <img src="/componentui/color/analogous.svg" />
   <p>
-    <b>Complementary = </b> colors that are opposite on the color wheel, which produce higj color contrast.
+    <b>Complementary = </b> colors that are opposite on the color wheel, which produce high color contrast.
   </p>
   <img src="/componentui/color/complementary.svg" />
   <p>
@@ -71,8 +106,8 @@ icon: color.svg
 
 </section>
 <br><br>
-<section id="s3">
-  <h2> Limit your palette to three colors</h2>
+<section id="three_colors">
+  <h2 > Limit your palette to three colors</h2>
   <p>
    Because there are fewer colors to ponder and be distracted by, fewer colors enhance visual hierarchy and contrast.
   </p>
@@ -89,7 +124,7 @@ icon: color.svg
 
 </section>
 <br><br>
-<section id="s4">
+<section id="The_60_30_10_rule">
   <h2> The 60 - 30 -10 rule</h2>
   <p>
    According to this rule, color should be used 60%, 30%, and 10% of the time. Use 60% for the dominant color, 30% for the secondary color, and 10% for the accent color, in other words.
@@ -116,8 +151,8 @@ icon: color.svg
 
 </section>
 <br><br>
-<section id="s5">
-  <h2> Apply then iterate your colors</h2>
+<section id="iterate_your_colors">
+  <h2 > Apply then iterate your colors</h2>
   <p>
   After applying the 60-30-10 guideline, you'll need to step back and assess what's working and what isn't before making adjustments to your color scheme. Do your color choices help establish the proper visual hierarchy, for example?
 
@@ -131,11 +166,12 @@ icon: color.svg
   </p>
 </section>
 <br><br>
-<section id="s6">
-  <h2> Use colors consistently in your interface</h2>
+<section  id="use_colors_consistently">
+  <h2 > Use colors consistently in your interface</h2>
   <p>
     If your calls to action on one screen are bright pink, you should use the same color for calls to action everywhere, unless you have an absurdly excellent reason to stray from it.
- <img src="/componentui/color/colors_consistently.svg"  style="width: 1000px;"/>
+ <img src="/componentui/color/colors_consistently.svg"  style="width: 1000px; border: 1px solid #ccc;"/>
+ <img src="/componentui/color/colors_consistently_2.svg"  style="width: 1000px;  border: 1px solid #ccc;"/>
   </p>
 </section>
 
@@ -157,6 +193,7 @@ img{
     top: 15%;
   }
 
+
   .aside h2 {
     margin-bottom: 2rem
   }
@@ -165,16 +202,17 @@ img{
     padding-left: 1rem;
     border-left: 3px solid #ccc;
     padding: 0.5rem 1rem;
-    color: #ccc;
+     color: #999;
   }
 
-  .aside a:hover {
+  .aside a:hover, .aside a.active{
     border-color: #5d60ef;
     color: #5d60ef;
-    background-color: #ded7fb75;
+    background-color: #ded7fb47;
     padding: 0.5rem 1rem;
     font-weight: bold
   }
+
 
    @media (max-width: 1262px) {
   .aside {
