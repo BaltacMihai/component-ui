@@ -21,6 +21,7 @@ const guides = await Astro.glob("../guides/*.md");
               description={guide.frontmatter.excerpt}
               icon={guide.frontmatter.icon}
               link={guide.frontmatter.guide}
+              iconWidth={guide.frontmatter.iconWidth}
             />
           ))
         }

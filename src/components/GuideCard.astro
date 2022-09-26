@@ -6,6 +6,7 @@ export interface Props {
   description: string;
   icon: string;
   link: string;
+  iconWidth?: string;
 }
 
 const text = {
@@ -13,11 +14,16 @@ const text = {
   link: "Explore",
 };
 
-const { title, description, icon, link } = Astro.props as Props;
+const { title, description, icon, link, iconWidth } = Astro.props as Props;
 ---
 
 <div class="guide-card">
-  <img src={URL + icon} alt={title + " icon"} class="icon" />
+  <img
+    src={URL + icon}
+    alt={title + " icon"}
+    class="icon"
+    width={iconWidth ? iconWidth : 150}
+  />
   <div class="details">
     <p class="type">{text.type}</p>
     <h2 class="subtitle">{title}</h2>

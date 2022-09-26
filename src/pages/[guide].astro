@@ -25,6 +25,7 @@ const { Content, frontmatter } = Astro.props.guide;
         src={URL + frontmatter.icon}
         alt={frontmatter.title + " icon"}
         class="icon"
+        width={frontmatter.iconWidth ? frontmatter.iconWidth : 150}
       />
       <div class="col">
         <h1 class="title">{frontmatter.title}</h1>
@@ -47,6 +48,9 @@ const { Content, frontmatter } = Astro.props.guide;
   .row {
     display: flex;
     align-items: center;
+  }
+  img {
+    margin-right: 2rem;
   }
 
   @media (max-width: 1025px) {
@@ -73,7 +77,7 @@ const { Content, frontmatter } = Astro.props.guide;
 
   .content {
     width: 70%;
-    padding: 1rem 40px;
+    padding: 2rem 40px;
   }
 
   @media (max-width: 1025px) {

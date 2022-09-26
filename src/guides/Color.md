@@ -27,7 +27,7 @@ isInViewport(section) ?
        element.classList.remove("active");
 }
 
-const ids = ["why","what_are_colors","choose_a_color_harmony","three_colors","The_60_30_10_rule","iterate_your_colors","contrast","use_colors_consistently"]
+const ids = ["why","what_are_colors","three_colors","The_60_30_10_rule","iterate_your_colors","contrast","use_colors_consistently"]
 
 document.addEventListener('scroll', function () {
 ids.forEach(one => show(one))
@@ -49,7 +49,6 @@ ids.forEach(one => show(one))
   <a href="#iterate_your_colors" id="nav_iterate_your_colors"> Apply then iterate your colors</a>
   <a href="#contrast" id="nav_contrast"> Contrast</a>
   <a href="#use_colors_consistently" id="nav_use_colors_consistently"> Use colors consistently in your interface</a>
-  <a href="#choose_a_color_harmony" id="nav_choose_a_color_harmony"> Choose a color harmony </a>
 
 </div>
 <section id="why">
@@ -157,41 +156,6 @@ A poor contrast might make it difficult to interpret the design.</p>
  <img src="/componentui/color/colors_consistently.svg"  style="width: 1000px; border: 1px solid #ccc;"/>
  <img src="/componentui/color/colors_consistently_2.svg"  style="width: 1000px;  border: 1px solid #ccc;"/>
   </p>
-</section>
-<section id="choose_a_color_harmony">
-  <h2 > Choose a color harmony </h2>
-  <br>
-  <p>
-   Color harmonies can be viewed as the foundational elements or basic design of a color palette. Typical color harmonies include:
-  </p>
-  <p>
-    <b>Analogous = </b> colors that are next to each other on the color wheel (This color harmony creates low color
-    contrast)
-  </p>
-  <img src="/componentui/color/analogous.svg" />
-  <p>
-    <b>Complementary = </b> colors that are opposite on the color wheel, which produce high color contrast.
-  </p>
-  <img src="/componentui/color/complementary.svg" />
-  <p>
-    <b> Split-complementary = </b> a color combined with others from either side of its complementary color.
-
-  </p>
-
-  <img src="/componentui/color/Split-complementary.svg" />
-  <p>
-    <b>Tridic = </b> three equidistant colors ( 120 degrees apart) on the color wheel.
-
-  </p>
-
-  <img src="/componentui/color/Tridic.svg" />
-  <p>
-    <b>Monochromatic = </b> tones and shades of a single hue
-
-  </p>
-
-  <img src="/componentui/color/Monochromatic.svg" />
-
 </section>
 
 <style>
