@@ -95,6 +95,8 @@ Social media platforms like Facebook and LinkedIn are an example.
 It is clear that they don't exactly have the same color scheme, yet they are pretty close nonetheless.</p>
 <br>
 
+<p> Color palette samples may be found on the <a href="https://baltacmihai.github.io/componentui/resources/colorpalletes/" class="link"> resources page</a>. We selected to present four colors each, the first for "white space" and the final for text color.
+</p>
 </section>
 
 <section id="Inspiration_from_nature">
