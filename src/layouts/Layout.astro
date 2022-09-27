@@ -7,11 +7,13 @@ import "./../assets/sass/site.scss";
 export interface Props {
   title?: string;
   description?: string;
+  navbarActive?: string;
 }
 
 const {
   title = "Component UI",
   description = "High quality UI & UX guides created by community for community",
+  navbarActive = "none",
 } = Astro.props as Props;
 ---
 
@@ -26,7 +28,7 @@ const {
     <title>{title}</title>
   </head>
   <body>
-    <Navbar />
+    <Navbar navbarActive={navbarActive} />
     <slot />
 
     <Footer />

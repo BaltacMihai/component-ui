@@ -5,6 +5,12 @@ import { URL } from "../assets/data/url";
 import hamburgerIcon from "./../assets/icons/hamburger.svg";
 import closeIcon from "./../assets/icons/close.svg";
 
+export interface Props {
+  navbarActive: string;
+}
+
+const { navbarActive } = Astro.props as Props;
+
 const text = {
   logoTitle: "Component UI",
   guides: "Guides",
@@ -39,16 +45,22 @@ const text = {
     <p class="logo_title">{text.logoTitle}</p>
   </a>
   <div class="wrapper" id="navbar_wrapper">
-    <a href={URL + "guides"} class="items">
+    <a
+      href={URL + "guides"}
+      class={navbarActive === "guides" ? "items items-active" : "items"}
+    >
       {text.guides}
     </a>
-    <a href={URL + "paths"} class="items">
+    <a
+      href={URL + "paths"}
+      class={navbarActive === "paths" ? "items items-active" : "items"}
+    >
       {text.paths}
     </a>
-    <a href="#" class="items">
+    <a href="#" class="items" id="resources">
       {text.resources}
     </a>
-    <a href="#" class="items">
+    <a href="#" class="items" id="about">
       {text.about}
     </a>
     <a href={DONATION_LINK} class="items btn-primary">

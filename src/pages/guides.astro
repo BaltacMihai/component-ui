@@ -9,8 +9,8 @@ const text = {
 const guides = await Astro.glob("../guides/*.md");
 ---
 
-<Layout
-  ><div class="page page_paths">
+<Layout navbarActive="guides">
+  <div class="page page_paths">
     <div class="wrapper">
       <h1 class="title">{text.title}</h1>
       <div class="row">
