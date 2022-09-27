@@ -1,0 +1,11 @@
+---
+
+
+const { color } = Astro.props ;
+console.log(color)
+---
+{
+color.map((oneColor) => {
+    return <div style={"backround-color:" + oneColor}>{oneColor}</div>;
+  });
+}

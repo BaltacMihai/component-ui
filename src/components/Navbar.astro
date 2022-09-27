@@ -57,7 +57,10 @@ const text = {
     >
       {text.paths}
     </a>
-    <a href="#" class="items" id="resources">
+    <a
+      href={URL + "resources"}
+      class={navbarActive === "resources" ? "items items-active" : "items"}
+    >
       {text.resources}
     </a>
     <a href="#" class="items" id="about">

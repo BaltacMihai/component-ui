@@ -1,0 +1,276 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const text = {
+  title: "Our Resources",
+  toastText: "Color copied to the clipboard!",
+};
+
+const colors = [
+  {
+    // AIRBNB
+    col1: { name: "FFFFFF", textColor: "is-light" },
+    col2: { name: "C2405C", textColor: "is-light" },
+    col3: { name: "232323", textColor: "is-dark" },
+    col4: { name: "787878", textColor: "is-dark" },
+  },
+  {
+    // TWITTER
+    col1: { name: "FFFFFF", textColor: "is-light" },
+    col2: { name: "4C98E9", textColor: "is-light" },
+    col3: { name: "0F1319", textColor: "is-dark" },
+    col4: { name: "555E69", textColor: "is-dark" },
+  },
+  {
+    // LINKTREE
+    col1: { name: "F3F4F1", textColor: "is-light" },
+    col2: { name: "8039C5", textColor: "is-dark" },
+    col3: { name: "FDF2C3", textColor: "is-light" },
+    col4: { name: "0C0C0C", textColor: "is-dark" },
+  },
+  {
+    // TWITCH
+    col1: { name: "F9F9F9", textColor: "is-light" },
+    col2: { name: "EBEBEB", textColor: "is-light" },
+    col3: { name: "6F30E0", textColor: "is-dark" },
+    col4: { name: "0E0E0E", textColor: "is-dark" },
+  },
+  {
+    // SPOTIFY
+    col1: { name: "24574E", textColor: "is-light" },
+    col2: { name: "FFFFFF", textColor: "is-light" },
+    col3: { name: "66D46F", textColor: "is-dark" },
+    col4: { name: "242A38", textColor: "is-dark" },
+  },
+  {
+    // UBER
+    col1: { name: "FFFFFF", textColor: "is-light" },
+    col2: { name: "EFEFEF", textColor: "is-light" },
+    col3: { name: "555555", textColor: "is-dark" },
+    col4: { name: "000000", textColor: "is-dark" },
+  },
+  {
+    // SHAZAM
+    col1: { name: "FFFFFF", textColor: "is-light" },
+    col2: { name: "54B6F9", textColor: "is-light" },
+    col3: { name: "2F6DF7", textColor: "is-light" },
+    col4: { name: "54B6F9", textColor: "is-light" },
+    // GRADIENT - #2E6BF7
+  },
+  {
+    // STOIC
+    col1: { name: "F6F6F6", textColor: "is-light" },
+    col2: { name: "F1F3F4", textColor: "is-light" },
+    col3: { name: "E0E0E3", textColor: "is-light" },
+    col4: { name: "000000", textColor: "is-dark" },
+  },
+  //   OCEANIC COLORS
+  {
+    col1: { name: "BCD4F1", textColor: "is-light" },
+    col2: { name: "39D7FE", textColor: "is-light" },
+    col3: { name: "23BEC6", textColor: "is-light" },
+    col4: { name: "008CA2", textColor: "is-dark" },
+  },
+  {
+    col1: { name: "FEFEFE", textColor: "is-light" },
+    col2: { name: "E9EDFC", textColor: "is-light" },
+    col3: { name: "FF8281", textColor: "is-light" },
+    col4: { name: "12B4B6", textColor: "is-dark" },
+  },
+  ,
+  {
+    col1: { name: "FFFFFF", textColor: "is-light" },
+    col2: { name: "0EB8CC", textColor: "is-light" },
+    col3: { name: "0075DB", textColor: "is-light" },
+    col4: { name: "3151BD", textColor: "is-dark" },
+  },
+  {
+    col1: { name: "FFFFFF", textColor: "is-light" },
+    col2: { name: "EBEBEB", textColor: "is-light" },
+    col3: { name: "00ADB5", textColor: "is-light" },
+    col4: { name: "2A2A2A", textColor: "is-dark" },
+  },
+  {
+    col1: { name: "FFFFFF", textColor: "is-light" },
+    col2: { name: "FFEFE9", textColor: "is-light" },
+    col3: { name: "F45556", textColor: "is-light" },
+    col4: { name: "05A1AD", textColor: "is-dark" },
+  },
+  //   OCEANIC COLORS
+  {
+    col1: { name: "EFEBF0", textColor: "is-light" },
+    col2: { name: "ECC8FD", textColor: "is-light" },
+    col3: { name: "9C90FA", textColor: "is-light" },
+    col4: { name: "180B16", textColor: "is-dark" },
+  },
+  {
+    col1: { name: "F7FBFF", textColor: "is-light" },
+    col2: { name: "E2F0FF", textColor: "is-light" },
+    col3: { name: "FB8574", textColor: "is-light" },
+    col4: { name: "171E2B", textColor: "is-dark" },
+  },
+  {
+    col1: { name: "FFFFFF", textColor: "is-light" },
+    col2: { name: "E3E2F4", textColor: "is-light" },
+    col3: { name: "F4E2E2", textColor: "is-light" },
+    col4: { name: "1D1C22", textColor: "is-dark" },
+  },
+  {
+    col1: { name: "FFFFFF", textColor: "is-light" },
+    col2: { name: "FEFEF3", textColor: "is-light" },
+    col3: { name: "FFB9BA", textColor: "is-light" },
+    col4: { name: "000000", textColor: "is-dark" },
+  },
+  {
+    col1: { name: "FAFAFA", textColor: "is-light" },
+    col2: { name: "FEE3C7", textColor: "is-light" },
+    col3: { name: "C9BFFE", textColor: "is-light" },
+    col4: { name: "4D416C", textColor: "is-dark" },
+    // 272233
+  },
+];
+---
+
+<Layout navbarActive="resources">
+  <div class="page page_resources">
+    <div class="wrapper">
+      <h1 class="title">{text.title}</h1>
+      <p class="toast" id="toast">{text.toastText}</p>
+      <div class="colors">
+        {
+          colors?.map((color) => {
+            return (
+              <div class="container">
+                <div
+                  style={"background-color:#" + color.col1.name}
+                  class={
+                    color.col1.textColor === "is-light"
+                      ? "color is-light"
+                      : "color is-dark"
+                  }
+                  onclick={`copyToClipboard("${color.col1.name}")`}
+                >
+                  <p>#{color.col1.name}</p>
+                </div>
+                <div
+                  style={"background-color:#" + color.col2.name}
+                  class={
+                    color.col2.textColor === "is-light"
+                      ? "color is-light"
+                      : " color is-dark"
+                  }
+                  onclick={`copyToClipboard("${color.col2.name}")`}
+                >
+                  <p>#{color.col2.name}</p>
+                </div>
+                <div
+                  style={"background-color:#" + color.col3.name}
+                  class={
+                    color.col3.textColor === "is-light"
+                      ? "color is-light"
+                      : " color is-dark"
+                  }
+                  onclick={`copyToClipboard("${color.col3.name}")`}
+                >
+                  <p>#{color.col3.name}</p>
+                </div>
+                <div
+                  style={"background-color:#" + color.col4.name}
+                  class={
+                    color.col4.textColor === "is-light"
+                      ? "color is-light"
+                      : " color is-dark"
+                  }
+                  onclick={`copyToClipboard("${color.col4.name}")`}
+                >
+                  <p>#{color.col4.name}</p>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script is:inline>
+  const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+  async function copyToClipboard(colorName) {
+    console.log(colorName);
+    navigator.clipboard.writeText("#" + colorName);
+    const toast = document.getElementById("toast");
+    toast.style.display = "block";
+    await delay(2500);
+    toast.style.display = "none";
+  }
+</script>
+
+<style lang="scss">
+  .page_resources {
+    min-height: 80vh;
+
+    .toast {
+      background-color: #5d60ef;
+      padding: 1rem;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      position: fixed;
+      bottom: 4vh;
+      z-index: 999;
+      display: none;
+    }
+  }
+  .colors {
+    width: 95vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .container {
+    display: flex;
+    height: 124px;
+    border-radius: 10px;
+    width: 335px;
+    box-shadow: inset rgb(0 0 0 / 5%) -1px 1px, inset rgb(0 0 0 / 5%) 0 -1px;
+    border: 1px solid #ccc;
+    .color {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      width: 20%;
+      flex-basis: auto;
+      p {
+        display: none;
+      }
+
+      &:hover {
+        transition: all 0.1s ease-in-out;
+        flex-basis: 100px;
+        cursor: pointer;
+
+        p {
+          display: flex;
+        }
+      }
+
+      &:first-child {
+        border-radius: 10px 0 0 10px;
+      }
+      &:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+      &.is-light {
+        color: black;
+      }
+      &.is-dark {
+        color: white;
+      }
+    }
+  }
+</style>
