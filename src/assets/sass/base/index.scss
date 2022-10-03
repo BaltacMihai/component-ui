@@ -1,3 +1,3 @@
-@use "./variables.scss";
-@use "./buttons.scss";
-@use "./response.scss";
+@use "./variables.scss" as *;
+@use "./buttons.scss" as *;
+@use "./response.scss" as *;

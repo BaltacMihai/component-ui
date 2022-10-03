@@ -1,0 +1,196 @@
+@use "./../../base/index.scss" as *;
+@use "./../../base/response.scss" as *;
+
+.page_color_calculator {
+  min-height: 80vh;
+
+  .wrapper {
+    .title {
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-around;
+      width: 80vw;
+      @include tablet {
+        flex-direction: column;
+      }
+
+      .colors {
+        .row {
+          display: flex;
+          justify-content: center;
+          gap: 2.5rem;
+          flex-wrap: wrap;
+          .color {
+            h2 {
+              margin-left: 5px;
+            }
+            #colorPicker1,
+            #colorPicker2,
+            #colorGenerated1 {
+              width: 250px;
+              height: 175px;
+              border: 1px solid #ccc;
+              border-radius: 20px;
+            }
+            #colorPicker1,
+            #colorPicker2 {
+              background-color: #000000;
+              margin-bottom: 2.5rem;
+            }
+            #colorPicker1 {
+              background-color: #000000;
+            }
+            #colorPicker2 {
+              background-color: #232228;
+            }
+            #colorGenerated1 {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              p {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 10px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 50vh;
+
+        .label {
+          display: flex;
+          flex-direction: column;
+          label {
+            margin-bottom: 0.5rem;
+          }
+          .row {
+            display: flex;
+            justify-content: space-between;
+            &.relative {
+              position: relative;
+            }
+          }
+
+          input {
+            &:not(#opacityText) {
+              background: #ded7fb;
+              border-radius: 10px;
+              border: none;
+              padding: 0.75rem 1rem;
+              font-size: 1rem;
+              margin-right: 5px;
+
+              @include tablet {
+                width: 90%;
+              }
+            }
+            &#opacityText {
+              border: none;
+              font-size: 1rem;
+              border-bottom: 1px solid black;
+              width: 40px;
+              padding: 0 0.25rem;
+              text-align: center;
+            }
+            &:disabled:not(#primaryColorPicker, #backgroundColorPicker) {
+              opacity: 0.5;
+              & ~ img {
+                opacity: 0.5;
+              }
+            }
+          }
+          #opacity {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: 0.2s;
+            transition: opacity 0.2s;
+            margin-top: 1.5rem;
+            padding: 0 !important;
+            &:hover {
+              opacity: 1;
+            }
+            &::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 15px;
+              height: 15px;
+              background: #5d60ef;
+              cursor: pointer;
+            }
+            &::-moz-range-thumb {
+              width: 15px;
+              height: 15px;
+              background: #5d60ef;
+              cursor: pointer;
+            }
+          }
+
+          .colorPickerIcon {
+            $size: 25px;
+            width: $size;
+            position: absolute;
+            right: -0.25rem;
+            top: 5px;
+          }
+
+          #primaryColorPicker,
+          #backgroundColorPicker {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: -2rem;
+            top: 1rem;
+          }
+
+          .error {
+            background-color: #5d60ef;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            display: none;
+          }
+        }
+        .btns {
+          .btn {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            &-active {
+              @extend .btn-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  .toast {
+    background-color: #5d60ef;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    bottom: 4vh;
+    z-index: 999;
+    display: none;
+  }
+}

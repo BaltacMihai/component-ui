@@ -1,8 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ColorPalettesIcon from "./../assets/images/resources/colorPalette.svg";
+import ColorCalculatorIcon from "./../assets/images/resources/colorCalculator.svg";
+
+import { URL } from "../assets/data/url";
 
 const text = {
   title: "Our Resources",
+  our: [
+    {
+      title: "Color palettes",
+      icon: ColorPalettesIcon,
+      link: URL + "resources/colorpalettes",
+    },
+    {
+      title: "Color Calculator",
+      icon: ColorCalculatorIcon,
+      link: URL + "resources/colorcalculator",
+    },
+  ],
 };
 ---
 
@@ -11,10 +27,14 @@ const text = {
     <div class="wrapper">
       <h1 class="title">{text.title}</h1>
       <div class="content">
-        <a
-          href="https://baltacmihai.github.io/componentui/resources/colorpalletes/"
-          class="resource-card">Color palletes</a
-        >
+        {
+          text.our.map((resource) => (
+            <a href={resource.link} class="resource-card">
+              <img src={resource.icon} alt="colorPalettesIcon" />
+              <p>{resource.title}</p>
+            </a>
+          ))
+        }
       </div>
     </div>
   </div>

@@ -1,0 +1,354 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import colorPicker from "./../../assets/icons/colorPicker.svg";
+
+const text = {
+  title: "Color Calculator",
+  toastText: "Color copied to the clipboard!",
+
+  inputs: {
+    primaryColor: "Primary Color",
+    backgroundColor: "Secondary Color",
+    result: "Result Color",
+    opacity: "Proportion",
+    labelOpacity: "opacity",
+    addColorsButton: "Add colors",
+    darkMode: "Convert color to dark mode",
+    resetButton: "Custom",
+  },
+};
+---
+
+<Layout navbarActive="resources">
+  <div class="page page_color_calculator">
+    <div class="wrapper">
+      <h1 class="title">{text.title}</h1>
+
+      <div class="content">
+        <div class="colors">
+          <div class="row">
+            <div class="color">
+              <h2>{text.inputs.primaryColor}</h2>
+              <div id="colorPicker1"></div>
+            </div>
+            <div class="color">
+              <h2>{text.inputs.backgroundColor}</h2>
+              <div id="colorPicker2"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="color">
+              <h2>{text.inputs.result}</h2>
+              <div id="colorGenerated1">
+                <p onclick="copyToClipboard()"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form">
+          <div class="label">
+            <label for="primaryColor">{text.inputs.primaryColor}</label>
+            <div class="row relative">
+              <input
+                type="text"
+                id="primaryColor"
+                name="primaryColor"
+                value="#000000"
+                onchange="changeBackgroundColorPicked('primary')"
+              />
+
+              <img
+                src={colorPicker}
+                alt="colorPickerIcon"
+                onclick="triggerColorPicker('primary')"
+                class="colorPickerIcon"
+              />
+              <input
+                type="color"
+                name="primaryColorPicker"
+                id="primaryColorPicker"
+                onchange="selectColorInput('primary')"
+              />
+            </div>
+
+            <p class="error" id="errorPrimaryColor">Please put a HEX color</p>
+          </div>
+          <div class="label">
+            <label for="backgroundColor">{text.inputs.backgroundColor}</label>
+            <div class="row relative">
+              <input
+                type="text"
+                id="backgroundColor"
+                name="backgroundColor"
+                value="#232228"
+                onchange="changeBackgroundColorPicked('background')"
+              />
+
+              <img
+                src={colorPicker}
+                alt="colorPickerIcon"
+                onclick="triggerColorPicker('background')"
+                class="colorPickerIcon"
+              />
+              <input
+                type="color"
+                name="backgroundColorPicker"
+                id="backgroundColorPicker"
+                onchange="selectColorInput('background')"
+              />
+            </div>
+
+            <p class="error" id="errorBackgroundColor">
+              Please put a HEX color
+            </p>
+          </div>
+          <div class="label">
+            <div class="row">
+              <label for="opacity">{text.inputs.opacity}</label>
+              <input
+                id="opacityText"
+                value="0.9"
+                onchange="changeColorModifier()"
+              />
+            </div>
+
+            <input
+              type="range"
+              id="opacity"
+              name="opacity"
+              min="0"
+              max="100"
+              value="90"
+              onchange="changeColor()"
+            />
+            <p class="error" id="errorOpacity">
+              Please put a number between 0 and 1
+            </p>
+          </div>
+          <div class="btns">
+            <p
+              class="btn btn-secondary"
+              id="btnAddColorsButton"
+              onclick="changeForm('addColors')"
+            >
+              {text.inputs.addColorsButton}
+            </p>
+            <p
+              class="btn btn-secondary"
+              id="btnDarkMode"
+              onclick="changeForm('darkMode')"
+            >
+              {text.inputs.darkMode}
+            </p>
+            <p
+              class="btn btn-secondary btn-active"
+              id="btnCustom"
+              onclick="changeForm('custom')"
+            >
+              {text.inputs.resetButton}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="toast" id="toast">{text.toastText}</p>
+  </div>
+</Layout>
+
+<script is:inline>
+  //choose between preselected options
+  function changeForm(path) {
+    let secondaryColor = document.getElementById("backgroundColor");
+    let backgroundColorPicker = document.getElementById(
+      "backgroundColorPicker"
+    );
+    let opacityInput = document.getElementById("opacity");
+    let opacityText = document.getElementById("opacityText");
+    let btnActive = document.getElementsByClassName("btn-active");
+    btnActive[0].classList.remove("btn-active");
+
+    switch (path) {
+      case "addColors":
+        let btnAddColorsButton = document.getElementById("btnAddColorsButton");
+
+        btnAddColorsButton.classList.add("btn-active");
+        opacityInput.value = 50;
+        opacityText.value = 0.5;
+        opacityInput.setAttribute("disabled", "true");
+        opacityText.setAttribute("disabled", "true");
+        secondaryColor.removeAttribute("disabled");
+        backgroundColorPicker.removeAttribute("disabled");
+        break;
+
+      case "darkMode":
+        let btnDarkMode = document.getElementById("btnDarkMode");
+
+        btnDarkMode.classList.add("btn-active");
+
+        let colorPicker2 = document.getElementById("colorPicker2");
+        secondaryColor.value = "#232228";
+        colorPicker2.style.backgroundColor = "#232228";
+        opacityInput.value = 90;
+        opacityText.value = 0.9;
+        opacityInput.setAttribute("disabled", "true");
+        opacityText.setAttribute("disabled", "true");
+        secondaryColor.setAttribute("disabled", "true");
+        backgroundColorPicker.setAttribute("disabled", "true");
+        break;
+
+      case "custom":
+        let btnCustom = document.getElementById("btnCustom");
+        btnCustom.classList.add("btn-active");
+        opacityInput.removeAttribute("disabled");
+        opacityText.removeAttribute("disabled");
+        secondaryColor.removeAttribute("disabled");
+        backgroundColorPicker.removeAttribute("disabled");
+    }
+  }
+
+  // onclick on the icon to trigger the colorPicker
+  function triggerColorPicker(path) {
+    switch (path) {
+      case "primary":
+        let primaryColorPicker = document.getElementById("primaryColorPicker");
+        primaryColorPicker.click();
+        break;
+
+      case "background":
+        let backgroundColorPicker = document.getElementById(
+          "backgroundColorPicker"
+        );
+        backgroundColorPicker.click();
+        break;
+    }
+  }
+
+  // onChange on the inputs to trigger the changeXColor
+  function selectColorInput(path) {
+    switch (path) {
+      case "primary":
+        let primaryColorPicker = document.getElementById("primaryColorPicker");
+        let primaryColor = document.getElementById("primaryColor");
+        primaryColor.value = primaryColorPicker.value;
+        changeBackgroundColorPicked("primary");
+        break;
+      case "background":
+        let backgroundColorPicker = document.getElementById(
+          "backgroundColorPicker"
+        );
+        let backgroundColor = document.getElementById("backgroundColor");
+        backgroundColor.value = backgroundColorPicker.value;
+        changeBackgroundColorPicked("background");
+        break;
+    }
+  }
+
+  function changeBackgroundColorPicked(path) {
+    let colorInput;
+    let colorPicked;
+    let errorMessage;
+    switch (path) {
+      case "primary":
+        colorInput = document.getElementById("primaryColor");
+        colorPicked = document.getElementById("colorPicker1");
+        errorMessage = document.getElementById("errorPrimaryColor");
+        break;
+      case "background":
+        colorInput = document.getElementById("backgroundColor");
+        colorPicked = document.getElementById("colorPicker2");
+        errorMessage = document.getElementById("errorBackgroundColor");
+        break;
+    }
+
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(
+      colorInput.value
+    );
+    if (!result) {
+      errorMessage.style.display = "block";
+      return null;
+    } else {
+      if (errorMessage.style.display === "block") {
+        errorMessage.style.display = "none";
+      }
+      colorPicked.style.backgroundColor = colorInput.value;
+      changeColor();
+    }
+  }
+
+  function changeColorModifier() {
+    let opacityInput = document.getElementById("opacity");
+    let opacityText = document.getElementById("opacityText");
+
+    opacityInput.value = opacityText.value * 100;
+
+    changeColor();
+  }
+
+  function changeColor() {
+    //get content
+    let primaryColor = document.getElementById("primaryColor");
+    let colorGenerated1 = document.getElementById("colorGenerated1");
+    let backgroundColor = document.getElementById("backgroundColor");
+    let opacityInput = document.getElementById("opacity");
+    let opacityText = document.getElementById("opacityText");
+
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(
+      backgroundColor.value
+    );
+
+    //get the data
+    const fgCol = hexToRgb(primaryColor.value);
+    const bgCol = hexToRgb(backgroundColor.value);
+    const opacity = parseInt(opacityInput.value) / 100;
+
+    opacityText.value = opacity;
+    let flattenedColor = {
+      r: (opacity * fgCol.r + (1 - opacity) * bgCol.r).toFixed(),
+      g: (opacity * fgCol.g + (1 - opacity) * bgCol.g).toFixed(),
+      b: (opacity * fgCol.b + (1 - opacity) * bgCol.b).toFixed(),
+    };
+
+    colorGenerated1.style.backgroundColor = rgbToHex(
+      parseInt(flattenedColor.r),
+      parseInt(flattenedColor.g),
+      parseInt(flattenedColor.b)
+    );
+    const element = colorGenerated1.children;
+    element[0].innerText = rgbToHex(
+      parseInt(flattenedColor.r),
+      parseInt(flattenedColor.g),
+      parseInt(flattenedColor.b)
+    );
+  }
+  const rgbToHex = (r, g, b) =>
+    "#" +
+    [r, g, b]
+      .map((x) => {
+        const hex = x.toString(16);
+        return hex.length === 1 ? "0" + hex : hex;
+      })
+      .join("");
+  function hexToRgb(hex) {
+    let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result
+      ? {
+          r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
+          b: parseInt(result[3], 16),
+        }
+      : null;
+  }
+
+  const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+  async function copyToClipboard() {
+    let colorGenerated1 = document.getElementById("colorGenerated1");
+    const element = colorGenerated1.children;
+    colorName = element[0].innerText;
+    navigator.clipboard.writeText(colorName);
+    const toast = document.getElementById("toast");
+    toast.style.display = "block";
+    await delay(2500);
+    toast.style.display = "none";
+  }
+</script>
