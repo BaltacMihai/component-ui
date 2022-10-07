@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import illustration from "../assets/images/thankyoupage.svg";
+import { URL } from "../assets/data/url";
+import { DONATION_LINK } from "../assets/data/donation";
+
+const text = {
+  title: "Thank you for submitting!",
+  subtitle:
+    "We listen to community feedback and try to implement as soon as possible.",
+  contribute: "Contribute",
+  homepage: "Homepage",
+};
+---
+
+<Layout title="Thank You">
+  <div class="page page_thankYou">
+    <div class="wrapper">
+      <h1 class="title">{text.title}</h1>
+      <h2 class="subtitle">{text.subtitle}</h2>
+      <div class="options">
+        <a href={DONATION_LINK} class="btn-secondary">
+          {text.contribute}
+        </a>
+        <a href={URL} class="btn-primary">
+          {text.homepage}
+        </a>
+      </div>
+    </div>
+    <img
+      src={illustration}
+      alt="Tool Illustration Background"
+      class="illustration"
+    />
+  </div>
+</Layout>
+
+<style>
+
+</style>

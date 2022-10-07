@@ -1,0 +1,45 @@
+@use "./../base/variables.scss" as *;
+@use "./../base/response.scss" as *;
+
+.page_thankYou {
+  height: 100vh;
+  @include phone {
+    margin-top: 5rem;
+  }
+
+  .title {
+    width: 100% !important;
+  }
+  .subtitle {
+    margin-top: 1rem;
+  }
+  .options {
+    display: flex;
+    margin: 2rem 0;
+
+    width: 35%;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      width: auto;
+      > * {
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  .wrapper {
+    z-index: 2;
+    height: 80vh;
+    justify-content: center;
+  }
+  .illustration {
+    position: absolute;
+    top: 10vh;
+    width: 100vw;
+    height: 55vw;
+    z-index: 0;
+    object-fit: contain;
+  }
+}

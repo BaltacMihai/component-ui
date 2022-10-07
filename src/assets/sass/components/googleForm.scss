@@ -1,0 +1,83 @@
+@use "./../base/variables.scss" as *;
+@use "./../base/response.scss" as *;
+
+.googleForm {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  padding: 2rem 2rem;
+  padding-bottom: 0;
+  font-size: 18px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    flex: 0 0 30%;
+
+    @include tablet {
+      flex: 0 0 100%;
+    }
+
+    @include phone {
+      flex: 0 0 100%;
+    }
+
+    .title {
+      width: 100%;
+      justify-content: start;
+      padding-bottom: 2.5rem;
+    }
+
+    .form-element {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+      span {
+        margin-bottom: 0.5rem;
+      }
+
+      input,
+      textarea {
+        background: #ded7fb7c;
+        border-radius: 10px;
+        border: none;
+        font-size: 18px;
+        padding: 0.75rem 1rem;
+      }
+
+      textarea {
+        height: 10rem;
+        resize: none;
+      }
+    }
+    button {
+      width: 100%;
+      background: #5d60ef;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 57px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+  }
+  img {
+    @include tablet {
+      display: none;
+    }
+
+    @include phone {
+      display: none;
+    }
+  }
+}

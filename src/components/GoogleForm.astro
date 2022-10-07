@@ -1,0 +1,62 @@
+---
+import crane from "../assets/images/Crane.svg";
+
+const data = {
+  title: "Want to see more? Just say!",
+  inputsName: {
+    name: "Name",
+    feedback: "Feedback",
+  },
+  submitBtn: "Send your feedback",
+};
+---
+
+<div class="googleForm">
+  <div class="form">
+    <script type="text/javascript">
+      var submitted = false;
+    </script>
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display:none;"
+      onload="if(submitted) {window.location='./thankyou';}"></iframe>
+    <h2 class="title">{data.title}</h2>
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSduRy7MnoDTM1RORBHfAX4_WpFGTpq2TPYPWv-tmiOkDz4Htw/formResponse"
+      method="post"
+      target="hidden_iframe"
+      onsubmit="submitted=true;"
+    >
+      <div class="form-element">
+        <span>{data.inputsName.name}</span>
+        <input
+          type="text"
+          class="ceva"
+          name="entry.2106550135"
+          autocomplete="off"
+          tabindex="0"
+          aria-labelledby="i1"
+          aria-describedby="i2 i3"
+          dir="auto"
+          data-initial-dir="auto"
+        />
+      </div>
+      <div class="form-element">
+        <span>{data.inputsName.feedback}</span>
+        <textarea
+          name="entry.1012625649"
+          data-rows="1"
+          tabindex="0"
+          aria-label="Your response"
+          dir="auto"
+          data-initial-dir="auto"
+          data-initial-value=""
+          aria-labelledby="i5"
+          aria-describedby="i6 i7"></textarea>
+      </div>
+      <button type="submit"> {data.submitBtn}</button>
+    </form>
+  </div>
+  <img src={crane} alt="Crane Illustration" />
+</div>

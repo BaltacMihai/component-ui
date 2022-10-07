@@ -3,11 +3,19 @@ import Layout from "../layouts/Layout.astro";
 import { URL } from "../assets/data/url";
 
 import illustration from "../assets/images/homepage_illustrations.svg";
+import GoogleForm from "../components/GoogleForm.astro";
 
 const text = {
-  title: "The one UI&UX Guide",
-  subtitle: "Learn how to build and how to make it look good",
-  cta: "View Guides",
+  firstSection: {
+    title: "The one UI&UX Guide",
+    subtitle: "Learn how to build and how to make it look good",
+    cta: "View Guides",
+  },
+  secondSection: {
+    title: "How it works",
+    subtitle:
+      "A design guide focused on the desire of the community for the community.",
+  },
 };
 ---
 
@@ -15,10 +23,10 @@ const text = {
   <div class="page page_home">
     <section>
       <div class="wrapper">
-        <h1 class="title">{text.title}</h1>
-        <h2 class="subtitle">{text.subtitle}</h2>
+        <h1 class="title">{text.firstSection.title}</h1>
+        <h2 class="subtitle">{text.firstSection.subtitle}</h2>
         <a href={URL + "guides"} class="cta btn-primary">
-          {text.cta}
+          {text.firstSection.cta}
         </a>
       </div>
 
@@ -28,5 +36,21 @@ const text = {
         class="illustration"
       />
     </section>
+    <section class="pt-4">
+      <div class="wrapper">
+        <h2 class="title">{text.secondSection.title}</h2>
+        <h3 class="subtitle">
+          {text.secondSection.subtitle}
+        </h3>
+
+        <GoogleForm />
+      </div>
+    </section>
   </div>
 </Layout>
+
+<style lang="scss">
+  .pt-4 {
+    padding-top: 4rem;
+  }
+</style>
