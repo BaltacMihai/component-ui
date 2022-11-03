@@ -1,12 +1,72 @@
----
-title: Color Palette
-guide: color-pallete
-excerpt: The color palette is a critical component for identifying a brand and defining color standards.
-icon: colorPallete.svg
-iconWidth: 140px;
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/componentui/assets/icon.38b8338e.svg">
+    <meta name="description" content="High quality UI &#38; UX guides created by community for community">
+    <title>Color Palette</title>
+  <link rel="stylesheet" href="/componentui/assets/_guide_.047844a6.css" />
+<link rel="stylesheet" href="/componentui/assets/e94fdb72.a43b2444.css" /></head>
+  <body>
+    <script>
+  function myFunction() {
+    let menu = document.getElementById("navbar_wrapper");
+    let open = document.getElementById("navbar_open");
+    let close = document.getElementById("navbar_close");
 
-<script>
+    if (menu.classList.contains("responsive")) {
+      menu.classList.remove("responsive");
+      close.style.display = "none";
+      open.style.display = "flex";
+    } else {
+      menu.classList.add("responsive");
+      close.style.display = "flex";
+      open.style.display = "none";
+    }
+  }
+</script>
+
+<div class="navbar">
+  <a href="./../" class="logo">
+    <img src="/componentui/assets/icon.38b8338e.svg" alt="logo" class="logo_image">
+    <p class="logo_title">Component UI</p>
+  </a>
+  <div class="wrapper" id="navbar_wrapper">
+    <a href="./../guides" class="items">
+      Guides
+    </a>
+    <a href="./../paths" class="items">
+      Paths
+    </a>
+    <a href="./../resources" class="items">
+      Resources
+    </a>
+    <a href="#" class="items" id="about">
+      About
+    </a>
+    <a href="https://www.buymeacoffee.com/componentui" class="items btn-primary">
+      Contribute
+    </a>
+  </div>
+  <div class="responsive-icons" onclick="myFunction()">
+    <img src="/componentui/assets/hamburger.8d3deba3.svg" alt="hamburgerIcon" class="open" id="navbar_open">
+    <img src="/componentui/assets/close.ff094e87.svg" alt="closeIcon" class="close" id="navbar_close">
+  </div>
+</div>
+    <div class="guide-page astro-ZTNXMFL7">
+    <div class="row astro-ZTNXMFL7">
+      <img src="./../colorPallete.svg" alt="Color Palette icon" class="icon astro-ZTNXMFL7" width="140px;">
+      <div class="col astro-ZTNXMFL7">
+        <h1 class="title astro-ZTNXMFL7">Color Palette</h1>
+        <h3 class="astro-ZTNXMFL7">Guide</h3>
+        <p class="astro-ZTNXMFL7">The color palette is a critical component for identifying a brand and defining color standards.</p>
+      </div>
+    </div>
+
+    <div class="content astro-ZTNXMFL7">
+      <script>
   function isInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
@@ -40,7 +100,6 @@ iconWidth: 140px;
     passive: true
   });
 </script>
-
 <div class="aside">
   <h2> Lesson Contents: </h2>
   <a href="#what" id="nav_what">What is a color palette? </a>
@@ -48,13 +107,10 @@ iconWidth: 140px;
     applications</a>
   <a href="#Inspiration_from_nature" id="nav_Inspiration_from_nature"> Inspiration from nature </a>
   <a href="#color_harmony" id="nav_color_harmony"> Color harmony </a>
-
 </div>
-
 <p> I recommend studying this guide after going through the
   <a href="https://baltacmihai.github.io/componentui/color/" class="link"> "color" guide </a> .
 </p>
-
 <br>
 <section id="what">
   <h2>What is a color palette?</h2>
@@ -64,22 +120,16 @@ iconWidth: 140px;
   <b> Why?</b>
   <p>Because consistent color use throughout all graphic assets, including posters and websites, makes a brand easier to
     recognize.</p>
-
   <p>We discovered from the "color" guide that we must restrict our use of color, leading to the creation of the
     <a href="https://baltacmihai.github.io/componentui/color/#The_60_30_10_rule" class="link"> 60/30/10 guideline </a>.
     A color palette is created by these values.
   </p>
-
   <br>
   <h3> How do we create a good color palette? </h3>
-
   <p>We may construct a solid palette in a variety of ways, therefore I'll break it down into three categories:</p>
 </section>
-
 <section id="Inspiration_from_other_applications">
-
   <h2>Inspiration from other applications </h2>
-
   <p>Making fresh connections between previously established ideas or concepts is one definition of creativity.
     Therefore, we can "copy" components from various parts to create our final product.
     This approach is recommended in terms of user experience. Because the user will mentally associate our color scheme
@@ -87,39 +137,27 @@ iconWidth: 140px;
     <br>
     <br>
     Social media platforms like Facebook and LinkedIn are an example.
-
   </p>
-  <img src="/componentui/colorPallete/FacebookVsLinkedIn.svg" width=500;
-    style="border: 1px solid #c9caef; padding: 1rem" />
+  <img src="/componentui/colorPallete/FacebookVsLinkedIn.svg" width="500;" style="border: 1px solid #c9caef; padding: 1rem">
   <br>
   <p>or Pinterest and YouTube</p>
   <br>
-  <img src="/componentui/colorPallete/YoutubeVsPinterest.svg" width=500;
-    style="border: 1px solid #c9caef; padding: 1rem" />
-
+  <img src="/componentui/colorPallete/YoutubeVsPinterest.svg" width="500;" style="border: 1px solid #c9caef; padding: 1rem">
   <p>
     It is clear that they don't exactly have the same color scheme, yet they are pretty close nonetheless.</p>
   <br>
-
-  <p> Color palette samples may be found on the <a
-      href="https://baltacmihai.github.io/componentui/resources/colorpalettes/" class="link"> resources page</a>. We
+  <p> Color palette samples may be found on the <a href="https://baltacmihai.github.io/componentui/resources/colorpalettes/" class="link"> resources page</a>. We
     selected to present four colors each, the first for "white space" and the final for text color.
   </p>
 </section>
-
 <section id="Inspiration_from_nature">
   <h2> Inspiration from nature </h2>
-
   <p>This approach to developing effective color palettes is by far the most challenging and exciting. I do not advise
     beginners to use this technique.</p>
-
   <br>
-  <img src="/componentui/colorPallete/InspiredByNature.svg" width=1000; />
-
+  <img src="/componentui/colorPallete/InspiredByNature.svg" width="1000;">
   <p>An image can be used to create an infinite number of palettes.</p>
-
 </section>
-
 <section id="color_harmony">
   <h2> Category 3: Color harmony </h2>
   <br>
@@ -131,32 +169,24 @@ iconWidth: 140px;
     <b>Analogous = </b> colors that are next to each other on the color wheel (This color harmony creates low color
     contrast)
   </p>
-  <img src="/componentui/colorPallete/analogous.svg" />
+  <img src="/componentui/colorPallete/analogous.svg">
   <p>
     <b>Complementary = </b> colors that are opposite on the color wheel, which produce high color contrast.
   </p>
-  <img src="/componentui/colorPallete/complementary.svg" />
+  <img src="/componentui/colorPallete/complementary.svg">
   <p>
     <b> Split-complementary = </b> a color combined with others from either side of its complementary color.
-
   </p>
-
-  <img src="/componentui/colorPallete/Split-complementary.svg" />
+  <img src="/componentui/colorPallete/Split-complementary.svg">
   <p>
     <b>Tridic = </b> three equidistant colors ( 120 degrees apart) on the color wheel.
-
   </p>
-
-  <img src="/componentui/colorPallete/Tridic.svg" />
+  <img src="/componentui/colorPallete/Tridic.svg">
   <p>
     <b>Monochromatic = </b> tones and shades of a single hue
-
   </p>
-
-  <img src="/componentui/colorPallete/Monochromatic.svg" />
-
+  <img src="/componentui/colorPallete/Monochromatic.svg">
 </section>
-
 <style>
   a.link {
     color: #5d60ef;
@@ -214,3 +244,39 @@ iconWidth: 140px;
     }
   }
 </style>
+    </div>
+  </div>
+
+    <div class="footer">
+  <div class="wrapper">
+    <div class="logo">
+      <div class="logo_item">
+        <img src="/componentui/assets/icon.38b8338e.svg" alt="logo" class="logo_image">
+        <p class="logo_title">Component UI</p>
+      </div>
+      <p>High quality guides created by community for community</p>
+    </div>
+    <div class="navigation">
+      <a href="#" class="items">
+        About
+      </a>
+      <a href="#" class="items">
+        FAQ
+      </a>
+      <a href="#" class="items">
+        Behing the scenes
+      </a>
+      <a href="#" class="items">
+        Terms of use
+      </a>
+      <a href="https://www.buymeacoffee.com/componentui" class="items">
+        Contribute
+      </a>
+    </div>
+  </div>
+  <p class="copyright">
+    Copyright &copy; 2022 ComponentUI. All rights reserved.
+  </p>
+</div>
+  </body></html>
+

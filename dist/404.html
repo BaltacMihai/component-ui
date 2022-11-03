@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/componentui/assets/icon.38b8338e.svg">
+    <meta name="description" content="High quality UI &#38; UX guides created by community for community">
+    <title>Not found</title>
+  <link rel="stylesheet" href="/componentui/assets/e94fdb72.a43b2444.css" /></head>
+  <body>
+    <script>
+  function myFunction() {
+    let menu = document.getElementById("navbar_wrapper");
+    let open = document.getElementById("navbar_open");
+    let close = document.getElementById("navbar_close");
+
+    if (menu.classList.contains("responsive")) {
+      menu.classList.remove("responsive");
+      close.style.display = "none";
+      open.style.display = "flex";
+    } else {
+      menu.classList.add("responsive");
+      close.style.display = "flex";
+      open.style.display = "none";
+    }
+  }
+</script>
+
+<div class="navbar">
+  <a href="./../" class="logo">
+    <img src="/componentui/assets/icon.38b8338e.svg" alt="logo" class="logo_image">
+    <p class="logo_title">Component UI</p>
+  </a>
+  <div class="wrapper" id="navbar_wrapper">
+    <a href="./../guides" class="items">
+      Guides
+    </a>
+    <a href="./../paths" class="items">
+      Paths
+    </a>
+    <a href="./../resources" class="items">
+      Resources
+    </a>
+    <a href="#" class="items" id="about">
+      About
+    </a>
+    <a href="https://www.buymeacoffee.com/componentui" class="items btn-primary">
+      Contribute
+    </a>
+  </div>
+  <div class="responsive-icons" onclick="myFunction()">
+    <img src="/componentui/assets/hamburger.8d3deba3.svg" alt="hamburgerIcon" class="open" id="navbar_open">
+    <img src="/componentui/assets/close.ff094e87.svg" alt="closeIcon" class="close" id="navbar_close">
+  </div>
+</div>
+    <div class="page page_pageNotFound">
+    <div class="wrapper">
+      <h1 class="title">Currently this page has no content, feel free to leave a suggestion or to contribute.</h1>
+      <div class="options">
+        <a href="https://www.buymeacoffee.com/componentui" class="btn-secondary">
+          Contribute
+        </a>
+        <a href="./../" class="btn-primary">
+          Homepage
+        </a>
+      </div>
+    </div>
+    <img src="/componentui/assets/underConstruction.8c5b03bc.svg" alt="underConstructionIMG">
+  </div>
+
+    <div class="footer">
+  <div class="wrapper">
+    <div class="logo">
+      <div class="logo_item">
+        <img src="/componentui/assets/icon.38b8338e.svg" alt="logo" class="logo_image">
+        <p class="logo_title">Component UI</p>
+      </div>
+      <p>High quality guides created by community for community</p>
+    </div>
+    <div class="navigation">
+      <a href="#" class="items">
+        About
+      </a>
+      <a href="#" class="items">
+        FAQ
+      </a>
+      <a href="#" class="items">
+        Behing the scenes
+      </a>
+      <a href="#" class="items">
+        Terms of use
+      </a>
+      <a href="https://www.buymeacoffee.com/componentui" class="items">
+        Contribute
+      </a>
+    </div>
+  </div>
+  <p class="copyright">
+    Copyright &copy; 2022 ComponentUI. All rights reserved.
+  </p>
+</div>
+  </body></html>

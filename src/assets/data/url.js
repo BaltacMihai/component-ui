@@ -1,1 +1,1 @@
-export const URL = "/componentui/";
+export const URL = "./../";

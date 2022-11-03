@@ -1,12 +1,72 @@
----
-title: Dark vs Light Mode
-guide: dark-vs-light-mode
-excerpt: You probably have at least one application set with dark mode. But how do we make an application with dark mode and light mode?
-icon: lightDarkMode.svg
-iconWidth: 140px;
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/componentui/assets/icon.38b8338e.svg">
+    <meta name="description" content="High quality UI &#38; UX guides created by community for community">
+    <title>Dark vs Light Mode</title>
+  <link rel="stylesheet" href="/componentui/assets/_guide_.047844a6.css" />
+<link rel="stylesheet" href="/componentui/assets/e94fdb72.a43b2444.css" /></head>
+  <body>
+    <script>
+  function myFunction() {
+    let menu = document.getElementById("navbar_wrapper");
+    let open = document.getElementById("navbar_open");
+    let close = document.getElementById("navbar_close");
 
-<script>
+    if (menu.classList.contains("responsive")) {
+      menu.classList.remove("responsive");
+      close.style.display = "none";
+      open.style.display = "flex";
+    } else {
+      menu.classList.add("responsive");
+      close.style.display = "flex";
+      open.style.display = "none";
+    }
+  }
+</script>
+
+<div class="navbar">
+  <a href="./../" class="logo">
+    <img src="/componentui/assets/icon.38b8338e.svg" alt="logo" class="logo_image">
+    <p class="logo_title">Component UI</p>
+  </a>
+  <div class="wrapper" id="navbar_wrapper">
+    <a href="./../guides" class="items">
+      Guides
+    </a>
+    <a href="./../paths" class="items">
+      Paths
+    </a>
+    <a href="./../resources" class="items">
+      Resources
+    </a>
+    <a href="#" class="items" id="about">
+      About
+    </a>
+    <a href="https://www.buymeacoffee.com/componentui" class="items btn-primary">
+      Contribute
+    </a>
+  </div>
+  <div class="responsive-icons" onclick="myFunction()">
+    <img src="/componentui/assets/hamburger.8d3deba3.svg" alt="hamburgerIcon" class="open" id="navbar_open">
+    <img src="/componentui/assets/close.ff094e87.svg" alt="closeIcon" class="close" id="navbar_close">
+  </div>
+</div>
+    <div class="guide-page astro-ZTNXMFL7">
+    <div class="row astro-ZTNXMFL7">
+      <img src="./../lightDarkMode.svg" alt="Dark vs Light Mode icon" class="icon astro-ZTNXMFL7" width="140px;">
+      <div class="col astro-ZTNXMFL7">
+        <h1 class="title astro-ZTNXMFL7">Dark vs Light Mode</h1>
+        <h3 class="astro-ZTNXMFL7">Guide</h3>
+        <p class="astro-ZTNXMFL7">You probably have at least one application set with dark mode. But how do we make an application with dark mode and light mode?</p>
+      </div>
+    </div>
+
+    <div class="content astro-ZTNXMFL7">
+      <script>
   function isInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
@@ -37,57 +97,43 @@ iconWidth: 140px;
     passive: true
   });
 </script>
-
 <div class="aside">
   <h2> Lesson Contents: </h2>
   <a href="#what" id="nav_what">What's the difference? </a>
   <a href="#debate" id="nav_debate"> The Debate</a>
   <a href="#pureColors" id="nav_pureColors"> Pure Colors </a>
   <a href="#convertColors" id="nav_convertColors"> Covert Colors </a>
-
 </div>
-
 <p> I recommend studying this guide after going through the
   <a href="https://baltacmihai.github.io/componentui/color-pallete/" class="link"> "Color Palette" guide </a> .
 </p>
-
 <br>
 <section id="what">
-
   <h2>What's the difference?</h2>
-
   <p>The light-on-dark color scheme is a color scheme that employs light-colored text, icons, and graphical user
     interface components on a dark background. It is also known as dark mode, dark theme, or night mode.</p>
   <br>
   <p>Light mode (also known as day mode) is a color scheme that employs dark text, icons, and graphical user interface
     components on a light backdrop.</p>
-  <img src="/componentui/darkVsLightMode/darkVsLightExample.png" width=500;
-    style="border: 1px solid #c9caef; padding: 1rem; background: #ccc" />
+  <img src="/componentui/darkVsLightMode/darkVsLightExample.png" width="500;" style="border: 1px solid #c9caef; padding: 1rem; background: #ccc">
 </section>
-
 <section id="debate">
-
   <h2>The Debate</h2>
-
   <p>There are several disagreements over people's tastes; some like light mode, while others prefer dark mode.
     There are strong supporters on both sides, and every position is supported by facts and research. Let's look at some
     of the most often debated subjects.</p>
   <p><i>I'm not going to start an argument here, but I will provide an example </i></p>
   <br>
-
   <h3>What are the characteristics of regular people?</h3>
   <br>
   <p>Because we are interested in how people were taught, we want to find out how they were used to see the content.</p>
-
   <br>
   <p>
     We have been surrounded by black writing on light backgrounds for many years, even before computers, in the form of
     newspapers and books.
     Instead, computers used to have a default dark mode, which had white text on a black background, to make the energy
     consumed by the PC more efficient. This became less of an issue with time.</p>
-
   <br>
-
   <p>Because the amount of hours spent in front of a screen has risen in recent years, several studies have been
     conducted to identify their impacts. According to the American Optometric Association's (AOA) American Eye-Q® study,
     58 percent of individuals have suffered from digital eye strain or vision issues as a direct result. This is
@@ -95,25 +141,20 @@ iconWidth: 140px;
     the intensity of this artificial light.</p>
   <br>
   <b> How can we reduce these problems? </b>
-
   <p> We provide the user the freedom to make his own decisions. Therefore, if it is possible, we must build for both
     dark and light modes. </p>
-
   <br>
   <b>However, there's a catch...</b>
 </section>
 <section id="pureColors">
   <br>
   <h2>Pure colors</h2>
-
   <p>A pure color is one that has the highest saturation in each hue. Colors are classified into two types: achromatic
     colors like white, grey, and black, and chromatic colors like red, green, and blue.</p>
   <br>
   <br>
-
   <p>Try to image the RGB ( Red Green Blue ) </p>
   <br>
-
   <table>
     <thead>
       <tr>
@@ -163,53 +204,39 @@ iconWidth: 140px;
     </tbody>
   </table>
   <br>
-
   <p>For reading, a high color contrast is beneficial.</p><br>
   <p>
     However, reading pure color text against a pure color background can be eye-straining when done for long periods of
     time.
   </p>
-  <img src="/componentui/darkVsLightMode/pureColors.svg" width=500; style="border: 1px solid #c9caef; padding: 1rem;" />
+  <img src="/componentui/darkVsLightMode/pureColors.svg" width="500;" style="border: 1px solid #c9caef; padding: 1rem;">
   <br>
   <br>
   <p>Black has 0% color brightness compared to 100% for white, which results in high light levels that overstimulate the
     eyes. </p>
   <br>
-
-<img src="/componentui/darkVsLightMode/blackWhiteColors.svg" width=500;
-    style="border: 1px solid #c9caef; padding: 1rem; background: #ccc" />
+<p><img src="/componentui/darkVsLightMode/blackWhiteColors.svg" width="500;" style="border: 1px solid #c9caef; padding: 1rem; background: #ccc">
 <br>
-<br>
-
-<b>So, what can we do?</b>
-<br>
-
+<br></p>
+<p><b>So, what can we do?</b>
+<br></p>
   <p>Just avoid using pure colors is everything you need to do. Instead of using pure colors, try to employ shades of
     white or black.</p>
-  <img src="/componentui/darkVsLightMode/blackWhiteTransform.svg" width=500;
-    style="border: 1px solid #c9caef; padding: 1rem; background: #ccc" />
+  <img src="/componentui/darkVsLightMode/blackWhiteTransform.svg" width="500;" style="border: 1px solid #c9caef; padding: 1rem; background: #ccc">
   <br>
-
   <p>The colors appear extremely similar, if not identical, at first glance, but over time as our user browses the
     website, his eyes will grow tired more slowly.</p>
   <br>
   <p> Okay, but our design also includes colors in addition to different tones of black and white. We don't have to
     utilize pure colors, as we saw above. What should we do with the remaining hues in the color scheme?</p>
 </section>
-
 <section id="convertColors">
-
   <h2>Convert Colors</h2>
-
   <p>At first look, we might assume that we can leave our colors in their current state if they aren't pure hues.</p>
-  <img src="/componentui/darkVsLightMode/neonColors.svg" width=500;
-    style="border: 1px solid #c9caef; padding: 1rem; background: #ccc" />
-
+  <img src="/componentui/darkVsLightMode/neonColors.svg" width="500;" style="border: 1px solid #c9caef; padding: 1rem; background: #ccc">
   <p>Consider making the color in the circle above the dominant color, as it will be seen frequently. Even though this
     works perfectly in white mode, it does not address the issue of tired eyes in dark mode.</p>
-
-<b>So, what we do?</b>
-
+<p><b>So, what we do?</b></p>
   <p>
     We will convert our colors to dark mode, it's that easy.</p>
   <b>
@@ -232,12 +259,10 @@ iconWidth: 140px;
     This is an application that the community asked us for and we offer it. More details about how it works can be found
     on its page.
   </p>
-  <img src="/componentui/darkVsLightMode/neonColorsTransformed.svg" width=500;
-    style="border: 1px solid #c9caef; padding: 1rem; background: #ccc" />
+  <img src="/componentui/darkVsLightMode/neonColorsTransformed.svg" width="500;" style="border: 1px solid #c9caef; padding: 1rem; background: #ccc">
   <p>The concept is the same as with the black and white tone; it might not even be noticeable, but these values tire on
     the eye more slowly.</p>
 </section>
-
 <style>
   table {
     font-family: arial, sans-serif;
@@ -310,3 +335,39 @@ iconWidth: 140px;
     }
   }
 </style>
+    </div>
+  </div>
+
+    <div class="footer">
+  <div class="wrapper">
+    <div class="logo">
+      <div class="logo_item">
+        <img src="/componentui/assets/icon.38b8338e.svg" alt="logo" class="logo_image">
+        <p class="logo_title">Component UI</p>
+      </div>
+      <p>High quality guides created by community for community</p>
+    </div>
+    <div class="navigation">
+      <a href="#" class="items">
+        About
+      </a>
+      <a href="#" class="items">
+        FAQ
+      </a>
+      <a href="#" class="items">
+        Behing the scenes
+      </a>
+      <a href="#" class="items">
+        Terms of use
+      </a>
+      <a href="https://www.buymeacoffee.com/componentui" class="items">
+        Contribute
+      </a>
+    </div>
+  </div>
+  <p class="copyright">
+    Copyright &copy; 2022 ComponentUI. All rights reserved.
+  </p>
+</div>
+  </body></html>
+
