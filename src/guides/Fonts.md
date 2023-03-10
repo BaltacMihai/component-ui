@@ -44,12 +44,9 @@ ids.forEach(one => show(one))
 <div class="aside">
   <h2> Lesson Contents: </h2>
   <a href="#why" id="nav_why"> Why? </a>
-  <a href="#what_are_colors" id="nav_what_are_colors"> What are colors? </a>
-  <a href="#three_colors" id="nav_three_colors"> Limit your palette to three colors </a>
-   <a href="#The_60_30_10_rule" id="nav_The_60_30_10_rule"> The 60 - 30 -10 rule </a>
-  <a href="#iterate_your_colors" id="nav_iterate_your_colors"> Apply then iterate your colors</a>
-  <a href="#contrast" id="nav_contrast"> Contrast</a>
-  <a href="#use_colors_consistently" id="nav_use_colors_consistently"> Use colors consistently in your interface</a>
+  <a href="#what_is_typography" id="nav_what_is_typography"> What is typography? </a>
+  <a href="#readersType" id="nav_readersType"> Readers are captivated by typography </a>
+  <a href="#decisions" id="nav_decisions"> Decisions are influenced by typography. </a>
 
 </div>
 <section id="why">
@@ -67,7 +64,7 @@ Let's take a closer look at why typography is so crucial.
 
 </section>
 
-<section id="what_are_colors">
+<section id="what_is_typography">
 
   <h2 > What is typography?</h2>
   <br>
