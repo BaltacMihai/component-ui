@@ -1,0 +1,27 @@
+---
+title: test
+guide: test
+excerpt:
+  This test provides the steps you must do before beginning to work with and
+  compile Sass, as well as the output of sass files.
+icon: sass-settings.svg
+---
+
+import CodeSnippet from "./partials/CodeSnippet/CodeSnippet.jsx";
+import "./partials/style.css";
+
+export const internalLinks = [
+  { link: "John", name: 25 },
+  { link: "John", name: 25 },
+  { link: "John", name: 25 },
+];
+
+{/* Page Conent */}
+
+<section id={`#${internalLinks[0].link}`}>
+  <h2>Ceva Facut</h2>
+  <p>De facut</p>
+</section>
+;
+
+<CodeSnippet content={"node -v;"} lang="bash" client:only="react" />

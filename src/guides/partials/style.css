@@ -1,0 +1,42 @@
+a.link {
+  color: #5d60ef;
+  padding-bottom: 0.5px;
+  border-bottom: 2px solid #5d60ef;
+}
+
+a.link p {
+  display: inline;
+  border-bottom: 2px solid #5d60ef;
+}
+
+.content section {
+  margin-bottom: 5rem;
+}
+
+.content h2 {
+  margin-bottom: 2rem;
+}
+.content h3 {
+  margin: 2.5rem 0;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.7777778;
+  margin: 2rem 0;
+  display: inline;
+}
+
+.content p:empty {
+  display: block;
+}
+
+.content img {
+  max-width: 90%;
+  margin: 2.5rem 0;
+  display: block;
+}
+
+.mt-1 {
+  margin-top: 4rem;
+}

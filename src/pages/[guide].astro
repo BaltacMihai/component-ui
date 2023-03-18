@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { URL } from "../assets/data/url";
 
 export async function getStaticPaths() {
-  const guides = await Astro.glob("../guides/*.md");
+  const guides = await Astro.glob("../guides/*.mdx");
 
   return guides.map((guide) => ({
     params: {
@@ -15,12 +15,12 @@ export async function getStaticPaths() {
   }));
 }
 
-const { Content, frontmatter } = Astro.props.guide;
+const { Content, frontmatter, internalLinks } = Astro.props.guide;
 ---
 
 <Layout title={frontmatter.title}>
   <div class="guide-page">
-    <div class="row">
+    <div class="row guide-info">
       <img
         src={URL + frontmatter.icon}
         alt={frontmatter.title + " icon"}
@@ -37,10 +37,108 @@ const { Content, frontmatter } = Astro.props.guide;
     <div class="content">
       <Content />
     </div>
+    <div class="aside">
+      <h2>Lesson Contents:</h2>
+      {
+        internalLinks?.map((section) => {
+          return (
+            <a href={"#" + section.link} id={"nav_" + section.link}>
+              {section.name}
+            </a>
+          );
+        })
+      }
+    </div>
   </div>
 </Layout>
 
+<script>
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+    const windowWidth =
+      window.innerWidth || document.documentElement.clientWidth;
+
+    // Check if the top or bottom edge of the element is within the viewport
+    const topVisible = rect.top >= 0 && rect.top <= windowHeight;
+    const bottomVisible = rect.bottom >= 0 && rect.bottom <= windowHeight;
+
+    // Check if the left or right edge of the element is within the viewport
+    const leftVisible = rect.left >= 0 && rect.left <= windowWidth;
+    const rightVisible = rect.right >= 0 && rect.right <= windowWidth;
+
+    return (topVisible || bottomVisible) && (leftVisible || rightVisible);
+  }
+
+  function show(theId) {
+    const element = document.querySelector("#nav_" + theId);
+    const section = document.querySelector("#" + theId);
+
+    if (section && element) {
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          element.classList.add("active");
+        } else {
+          element.classList.remove("active");
+        }
+      });
+      observer.observe(section);
+    }
+  }
+
+  const ids = ["install", "compile", "cssfiles"];
+
+  document.addEventListener(
+    "scroll",
+    function () {
+      ids.forEach((one) => show(one));
+    },
+    {
+      passive: true,
+    }
+  );
+</script>
+
 <style>
+  .aside {
+    position: fixed;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+  }
+
+  .aside h2 {
+    margin-bottom: 2rem;
+  }
+
+  .aside a {
+    padding-left: 1rem;
+    border-left: 3px solid #ccc;
+    padding: 0.5rem 1rem;
+    color: #999;
+  }
+
+  .aside a:hover,
+  .aside a.active {
+    border-color: #5d60ef;
+    color: #5d60ef;
+    background-color: #ded7fb47;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+  }
+
+  .guide-info h3 {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 1262px) {
+    .aside {
+      display: none;
+    }
+  }
   .guide-page {
     padding: 1rem 10%;
   }
@@ -60,7 +158,7 @@ const { Content, frontmatter } = Astro.props.guide;
   }
 
   .col {
-    width: 55%;
+    width: 65%;
   }
   @media (max-width: 1025px) {
     .col {
@@ -76,8 +174,8 @@ const { Content, frontmatter } = Astro.props.guide;
   }
 
   .content {
-    width: 70%;
-    padding: 2rem 40px;
+    width: 80%;
+    padding: 3rem 0px;
   }
 
   @media (max-width: 1025px) {

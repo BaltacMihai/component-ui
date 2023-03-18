@@ -1,7 +1,9 @@
 ---
 title: Settings
 guide: settings
-excerpt: This module provides the steps you must do before beginning to work with and compile Sass, as well as the output of sass files.
+excerpt:
+  This module provides the steps you must do before beginning to work with and
+  compile Sass, as well as the output of sass files.
 icon: sass-settings.svg
 ---
 
@@ -52,58 +54,6 @@ ids.forEach(one => show(one))
 });
   </script>
 
-<div class="aside">
-  <h2> Lesson Contents: </h2>
-  <a href="#install" id="nav_install"> Install the module</a>
-  <a href="#compile" id="nav_compile"> Compile the sass files</a>
-  <a href="#cssfiles" id="nav_cssfiles"> Types of css files</a>
-
-</div>
-<section id="install">
-  <h2>Install the module</h2>
-  <p>
-  To build a sass file, follow these two steps. The first step is to install the Sass module, followed by compiling the Sass files into CSS. There are several approaches you may use depending on your frontend framework of choice, because some frameworks will automatically compile your sass while others will not.
-  </p> <br/><br/>
-
-<h3>The first step is to install the Sass module.</h3>
-<br/>
-<p>
-You will need a package manager to install the sass module ( like npm or yarn) and also Node.js . You may run the following scripts to see if you have these packages installed:
-
-```bash
-node -v;
-```
-
-<br />
-
-```bash
-npm -v;
-```
-
-  </p> <br/><p>
-If you don't already have them, you may get them here:  <a href="https://treehouse.github.io/installation-guides/windows/node-windows.html" class="link">Install Node.js and Npm</a>
- </p>
-
-<br/><p>
-In most circumstances, you must install the Sass module in the project as follows:
-
-  </p>
-<br/>
-
-```scss
-npm i sass;
-```
-
-<br />
-
-  <i>
-  <b>Note: </b>
-The only disadvantage of using this method is that certain frameworks can compile your Sass files in their own way, so you must install it in a particular manner ( ex. <a href="https://vue-loader.vuejs.org/guide/pre-processors.html#sass" class="link">Vue - Using Pre-Processors</a>).
-
-  </i>
-
-</section>
-
 <section id="compile">
   <h2>Compile the sass files</h2>
 
@@ -151,13 +101,18 @@ If we run this command and don't already have an index.css file, the file will b
 <b>2.</b> The second approach is having the framework automatically compile the sass files. To ensure that it functions in your framework, you must check for this.
 </p><br><p>
 
-Hence, in order to compile, import the Sass file similarly to how you imported the CSS file, and the framework will take care of the rest.</p>
+Hence, in order to compile, import the Sass file similarly to how you imported
+the CSS file, and the framework will take care of the rest.</p>
 
 <br/>
 
  <p>
 
-Using the --watch flag, you can additionally watch certain files or folders. The watch flag instructs Sass to monitor your source files for modifications and re-compile CSS after each Sass save. You would simply add the watch flag to your command, like in the following example, if you wanted to monitor (rather than manually build) your input.scss file:
+Using the --watch flag, you can additionally watch certain files or folders. The
+watch flag instructs Sass to monitor your source files for modifications and
+re-compile CSS after each Sass save. You would simply add the watch flag to your
+command, like in the following example, if you wanted to monitor (rather than
+manually build) your input.scss file:
 
 </p>
 <br/>
@@ -184,7 +139,8 @@ Sass has the ability to produce three different kinds of files.  </p>
 
 <p>
 
-Is the file with all the compiled code, together with the comments, spaces, and order.
+Is the file with all the compiled code, together with the comments, spaces, and
+order.
 
   </p>
 <br/>
@@ -203,7 +159,10 @@ Is the file with all the compiled code, together with the comments, spaces, and 
 
   <p>
 
-The name, line numbers, and column positions of the original Sass file are all included in a file known as a CSS source map. When employing browser developer tools, it is utilized by web developers and designers to troubleshoot their Sass and CSS code.
+The name, line numbers, and column positions of the original Sass file are all
+included in a file known as a CSS source map. When employing browser developer
+tools, it is utilized by web developers and designers to troubleshoot their Sass
+and CSS code.
 
   </p>
 
@@ -262,40 +221,7 @@ It should be noted that while minifying CSS code can aid in performance improvem
 img{
   max-width: 90%;
 }
-  .aside {
-    position: fixed;
-    right: 5%;
-    display: flex;
-    flex-direction: column;
-    top: 15%;
-  }
 
-
-  .aside h2 {
-    margin-bottom: 2rem
-  }
-
-  .aside a {
-    padding-left: 1rem;
-    border-left: 3px solid #ccc;
-    padding: 0.5rem 1rem;
-     color: #999;
-  }
-
-  .aside a:hover, .aside a.active{
-    border-color: #5d60ef;
-    color: #5d60ef;
-    background-color: #ded7fb47;
-    padding: 0.5rem 1rem;
-    font-weight: bold
-  }
-
-
-   @media (max-width: 1262px) {
-  .aside {
-    display: none;
-    }
-  }
 
   .astro-code{
     padding: 1rem;
