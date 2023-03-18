@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 const { Content, frontmatter, internalLinks } = Astro.props.guide;
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={`${frontmatter.path}: ${frontmatter.title}`}>
   <div class="guide-page">
     <div class="row guide-info">
       <img
