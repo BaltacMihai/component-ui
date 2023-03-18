@@ -20,10 +20,13 @@ a.link p {
   margin: 2.5rem 0;
 }
 
+.content p {
+  margin: 2rem 0;
+}
+
 p {
   font-size: 1.2rem;
   line-height: 1.7777778;
-  margin: 2rem 0;
   display: inline;
 }
 

@@ -22,6 +22,7 @@ const guides = await Astro.glob("../guides/*.mdx");
               icon={guide.frontmatter.icon}
               link={guide.frontmatter.guide}
               iconWidth={guide.frontmatter.iconWidth}
+              type={guide.frontmatter.path}
             />
           ))
         }
