@@ -24,6 +24,14 @@
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
   align-items: center;
+  img {
+    height: 120px;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   .type {
     color: $cl-primary;
@@ -42,6 +50,8 @@
   }
   .btn-primary {
     float: right;
+    width: fit-content;
+    align-self: end;
   }
 }
 

@@ -6,7 +6,7 @@ const text = {
   title: "Guides",
 };
 
-const guides = await Astro.glob("../guides/*.md");
+const guides = await Astro.glob("../guides/*.mdx");
 ---
 
 <Layout navbarActive="guides">
@@ -22,6 +22,7 @@ const guides = await Astro.glob("../guides/*.md");
               icon={guide.frontmatter.icon}
               link={guide.frontmatter.guide}
               iconWidth={guide.frontmatter.iconWidth}
+              type={guide.frontmatter.path}
             />
           ))
         }

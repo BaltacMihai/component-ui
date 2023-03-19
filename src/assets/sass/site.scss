@@ -1,3 +1,8 @@
-@use "./base/index.scss" as base;
+@use "./base/index.scss" as *;
+@use "./base/variables.scss" as *;
 @use "./pages/index.scss" as pages;
 @use "./components/index.scss" as components;
+
+:root {
+  --toastify-color-progress-dark: #{$cl-primary} !important;
+}

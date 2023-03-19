@@ -1,0 +1,154 @@
+---
+title: Color
+guide: color
+excerpt: Color is one of the most crucial tools a designer has since it can make or break a website.
+icon: color.svg
+path: Color
+---
+
+import "./partials/style.css";
+
+export const internalLinks = [
+  { link: "why", name: "Why?" },
+  { link: "what_are_colors", name: "What are colors?" },
+  { link: "three_colors", name: "Limit your palette to three colors" },
+  { link: "The_60_30_10_rule", name: "The 60 - 30 -10 rule" },
+  { link: "iterate_your_colors", name: "Apply then iterate your colors" },
+  { link: "contrast", name: "Contrast" },
+  {
+    link: "use_colors_consistently",
+    name: "Use colors consistently in your interface",
+  },
+];
+
+{/* Page Conent */}
+
+<section id={internalLinks[0].link}>
+  <h2>{internalLinks[0].name}</h2>
+  <p>
+    The user will quit your site instantly if it has a terrible color palette
+    but good content. However, if the color palette is nicely picked, the user
+    may give the site a chance.
+  </p>
+  <p>
+    Before we go into whether color palettes are excellent or bad, let's define
+    color.
+  </p>
+</section>
+
+<section id={internalLinks[1].link}>
+  <h2>{internalLinks[1].name}</h2>
+  <p>
+    Color is one of the most powerful tools we have as designers, whether we are
+    UI desingers or not. And it has the ability to perform a variety of things
+    for us. It may establish the tone for a brand and attract people' attention.
+    However, finding the appropriate color combination and then applying those
+    colors to your design might be difficult.
+  </p>
+  <p>So, how can you include color into your design?</p>
+  <p>
+    The selection of a color palette and its application to a design are not
+    coincidental. Iteration and careful application are required to fully
+    benefit from and take use of a color in a UI. Color may improve brand
+    impression, capture attention and stimulate interactions, influence user
+    emotions, and increase usability.
+  </p>
+  <h3> How? </h3>
+</section>
+
+<section id={internalLinks[2].link}>
+  <h2>{internalLinks[2].name}</h2>
+  <p>
+    Because there are fewer colors to ponder and be distracted by, fewer colors
+    enhance visual hierarchy and contrast.
+  </p>
+  <p>
+    Have you ever struggled to locate a particular cereal in the cereal aisle,
+    for instance? That is as a result of the abundance of colors! Every color is
+    fighting for your attention.
+  </p>
+  <img src="/componentui/color/market.jpg" style="width: 500px;" />
+  <p>The same is true for your designs.</p>
+  <p>
+    <b>Less is more.</b>
+  </p>
+  <h3> But how? </h3>
+</section>
+
+<section id={internalLinks[3].link}>
+  <h2>{internalLinks[3].name}</h2>
+  <p>
+    The 60/30/10 guideline, often known as <b>The Golden Rule</b>, states that
+    color should be utilised 60%, 30%, and 10% of the time. In other words, use
+    60% for the dominant color, 30% for the secondary color, and 10% for the
+    accent color.
+  </p>
+  <p>
+    This is more like a style of thinking because it's impossible to quantify
+    the amount of color you utilize.
+  </p>
+  <img src="/componentui/color/img-60-30-10.svg" style="width: 750px;" />
+  <p>
+    The <b>60%</b> is usually the netral or primary color. This portion will be
+    used as the base color of the design;
+  </p>
+  <p>
+    The <b>30%</b> is the secondary color. It is still visible and will be used
+    for some medium components such as card, carousel, etc.;
+  </p>
+  <p>
+    The <b>10%</b> is the accent color. This portion will be used for highlight
+    of the design. For example, CTA buton, pop up, and some important points of
+    your interface.;
+  </p>
+  <h3> Now that we have the colors, how do we use them? </h3>
+</section>
+
+<section id={internalLinks[4].link}>
+  <h2>{internalLinks[4].name}</h2>
+  <p>
+    After applying the 60-30-10 guideline, you'll need to step back and assess
+    what's working and what isn't before making adjustments to your color
+    scheme. Do your color choices help establish the proper visual hierarchy,
+    for example?
+  </p>
+  <p>
+    In other words, is your attention pulled to the design components you wish
+    to emphasize? Do the colors you've chosen help your design have harmony and
+    contrast?
+  </p>
+  <img src="/componentui/color/iterateColors.svg" style="width: 1000px;" />
+  <p>
+    Look for <b>contrast</b>!
+  </p>
+</section>
+
+<section id={internalLinks[5].link}>
+  <h2>{internalLinks[5].name}</h2>
+  <p>
+    Contrast aids in the organization of your design and the establishment of a
+    hierarchy, which simply displays which components of your design are more
+    significant (and signals viewers to focus on those). However, excellent
+    contrast provides visual appeal to your design in addition to underlining
+    the focus point.
+  </p>
+  <p>A poor contrast might make it difficult to interpret the design.</p>
+  <img src="/componentui/color/contrast.svg" style="width: 1000px;" />
+</section>
+
+<section id={internalLinks[6].link}>
+  <h2>{internalLinks[6].name}</h2>
+  <p>
+    If your calls to action on one screen are purple, you should use the same
+    color for calls to action everywhere, unless you have an absurdly excellent
+    reason to stray from it.
+    <img
+      src="/componentui/color/colors_consistently.svg"
+      style="width: 1000px; border: 1px solid #ccc;"
+    />
+    <img
+      src="/componentui/color/colors_consistently_2.svg"
+      style="width: 1000px;  border: 1px solid #ccc;"
+    />
+  </p>
+</section>

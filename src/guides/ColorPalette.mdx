@@ -1,0 +1,139 @@
+---
+title: Color Palette
+guide: color-pallete
+excerpt: The color palette is a critical component for identifying a brand and defining color standards.
+icon: colorPallete.svg
+iconWidth: 140px;
+path: Color
+---
+
+import "./partials/style.css";
+
+export const internalLinks = [
+  { link: "what", name: "What is a color palette?" },
+  { link: "other_apps", name: "Inspiration from other applications" },
+  { link: "nature", name: "Inspiration from nature" },
+  { link: "color_harmony", name: "Color harmony" },
+];
+
+{/* Page Conent */}
+
+<div class="disclaimer">
+  <p> I recommend studying this guide after going through the </p>
+  <a href="https://baltacmihai.github.io/componentui/color/" class="link">
+    "color" guide
+  </a>
+  <p>.</p>
+</div>
+
+<section id={internalLinks[0].link}>
+  <h2>{internalLinks[0].name}</h2>
+  <p>
+    A color palette is the combination of colors used in many creative and
+    design situations.
+  </p>
+  <p>
+    This offers guidance on how to use a brand's particular colors when it comes
+    to graphic design.
+  </p>
+  <p class="bold block"> Why?</p>
+  <p>
+    Because consistent color use throughout all graphic assets, including
+    posters and websites, makes a brand easier to recognize.
+  </p>
+  <p>
+    We discovered from the "color" guide that we must restrict our use of color,
+    leading to the creation of the{" "}
+    <a
+      href="https://baltacmihai.github.io/componentui/color/#The_60_30_10_rule"
+      class="link"
+    >
+      60/30/10 guideline
+    </a>
+    . A color palette is created by these values.
+  </p>
+  <h3> How do we create a good color palette? </h3>
+  <p>
+    We may construct a solid palette in a variety of ways, therefore I'll break
+    it down into three categories:
+  </p>
+</section>
+
+<section id={internalLinks[1].link}>
+  <h2>{internalLinks[1].name}</h2>
+  <p>
+    Making fresh connections between previously established ideas or concepts is
+    one definition of creativity. Therefore, we can "copy" components from
+    various parts to create our final product. This approach is recommended in
+    terms of user experience. Because the user will mentally associate our color
+    scheme with familiarity if they have previously used an application with a
+    similar color scheme.
+  </p>
+  <p>Social media platforms like Facebook and LinkedIn are an example.</p>
+  <img
+    src="/componentui/colorPallete/FacebookVsLinkedIn.svg"
+    width="500"
+    style="border: 1px solid #c9caef; padding: 1rem"
+  />
+  <p>or Pinterest and YouTube</p>
+  <img
+    src="/componentui/colorPallete/YoutubeVsPinterest.svg"
+    width="500"
+    style="border: 1px solid #c9caef; padding: 1rem"
+  />
+  <p>
+    It is clear that they don't exactly have the same color scheme, yet they are
+    pretty close nonetheless.
+  </p>
+  <p>
+    Color palette samples may be found on the{" "}
+    <a
+      href="https://baltacmihai.github.io/componentui/resources/colorpalettes/"
+      class="link"
+    >
+      {" "}
+      resources page
+    </a>
+    . We selected to present four colors each, the first for "white space" and the
+    final for text color.
+  </p>
+</section>
+
+<section id={internalLinks[2].link}>
+  <h2>{internalLinks[2].name}</h2>
+  <p>
+    This approach to developing effective color palettes is by far the most
+    challenging and exciting. I do not advise beginners to use this technique.
+  </p>
+  <img src="/componentui/colorPallete/InspiredByNature.svg" width="1000" />
+  <p>An image can be used to create an infinite number of palettes.</p>
+</section>
+
+<section id={internalLinks[3].link}>
+  <h2>{internalLinks[3].name}</h2>
+  <p>
+    Color harmonies can be viewed as the foundational elements or basic design
+    of a color palette. Typical color harmonies include:
+  </p> <img src="/componentui/colorPallete/analogous.svg" /> <p>
+    <b>Analogous = </b> colors that are next to each other on the color wheel
+    (This color harmony creates low color contrast)
+  </p>
+  <img src="/componentui/colorPallete/complementary.svg" />
+  <p>
+    <b>Complementary = </b> colors that are opposite on the color wheel, which
+    produce high color contrast.
+  </p> <img src="/componentui/colorPallete/Split-complementary.svg" />
+  <p>
+    <b> Split-complementary = </b> a color combined with others from either side
+    of its complementary color.
+  </p>
+  <img src="/componentui/colorPallete/Tridic.svg" />
+  <p>
+    <b>Tridic = </b> three equidistant colors ( 120 degrees apart) on the color
+    wheel.
+  </p>
+  <img src="/componentui/colorPallete/Monochromatic.svg" />
+  <p>
+    <b>Monochromatic = </b> tones and shades of a single hue
+  </p>
+</section>
