@@ -1,0 +1,62 @@
+---
+title: Alignment
+guide: alignment
+excerpt: Alignment is a fundamental principle in design that refers to the positioning and arrangement of elements in a visually pleasing and organized way.
+icon: alignment.svg
+path: Font
+---
+
+import "./partials/style.css";
+
+export const internalLinks = [
+  { link: "never", name: "Never align text to center." },
+];
+
+{/* Page Conent */}
+
+<section id={internalLinks[0].link}>
+  <h2>{internalLinks[0].name}</h2>
+  <p>
+    Centered type might be tempting to use, because it’s symmetrical. But the
+    left-aligned type is much easier to read. Hence why all books and blogs are
+    like this.
+  </p>
+  <div
+    style="
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+"
+  >
+    <img
+      src="/componentui/alignment/Align-center-rag-example.svg"
+      style="width: 450px;"
+    />
+    <img
+      src="/componentui/alignment/Align-left-rag-example.svg"
+      style="width: 300px;"
+    />
+    <img
+      src="/componentui/alignment/Align-vs-Other-Objects.svg"
+      style="width: 300px;"
+    />
+  </div>
+  <div
+    style="
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+"
+  >
+    <img
+      src="/componentui/alignment/Align-center-desav.svg"
+      style="width: 450px;"
+    />
+    <img src="/componentui/alignment/Align-left-av.svg" style="width: 450px;" />
+  </div>
+</section>

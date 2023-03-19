@@ -29,7 +29,7 @@ const { Content, frontmatter, internalLinks } = Astro.props.guide;
       />
       <div class="col">
         <h1 class="title">{frontmatter.title}</h1>
-        <h3>{`Guide - ${frontmatter.path}`}</h3>
+        <h3>{`${frontmatter.path}`}</h3>
         <p>{frontmatter.excerpt}</p>
       </div>
     </div>

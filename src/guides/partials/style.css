@@ -43,3 +43,14 @@ p {
 .mt-1 {
   margin-top: 4rem;
 }
+
+.bold {
+  font-weight: bold;
+}
+.block {
+  display: block;
+}
+
+.disclaimer {
+  margin-bottom: 2rem;
+}
