@@ -1,0 +1,50 @@
+@use "./../base/variables.scss" as *;
+.page_about {
+  .title {
+    font-size: $fs-title;
+    color: $cl-primary;
+    font-weight: bold;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  section {
+    padding: 0 $layout-margin * 4;
+    margin: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &:nth-child(odd) {
+      .content {
+        order: 2;
+      }
+      img {
+        order: 1;
+      }
+    }
+
+    .content {
+      flex: 0 0 60%;
+      .subtitile {
+        font-size: $fs-subtitle;
+        color: $cl-primary;
+        padding-bottom: 2rem;
+      }
+      .text {
+        font-size: $fs-content;
+      }
+    }
+    img {
+      flex: 0 0 30%;
+    }
+  }
+
+  .disclaimer {
+    margin-bottom: 5rem;
+  }
+}

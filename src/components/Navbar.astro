@@ -63,7 +63,10 @@ const text = {
     >
       {text.resources}
     </a>
-    <a href="#" class="items" id="about">
+    <a
+      href={URL + "about"}
+      class={navbarActive === "about" ? "items items-active" : "items"}
+    >
       {text.about}
     </a>
     <a href={DONATION_LINK} class="items btn-primary">

@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import teamWorkIllustration from "../assets/images/about/Teamwork_Monochromatic.svg";
+import Achievement_Monochromatic from "../assets/images/about/Achievement_Monochromatic.svg";
+import DataArranging_Monochromatic from "../assets/images/about/DataArranging_Monochromatic.svg";
+import FullInbox_Monochromatic from "../assets/images/about/FullInbox_Monochromatic.svg";
+import Startup_Monochromatic from "../assets/images/about/Startup_Monochromatic.svg";
+
+const content = {
+  title: "About",
+  sections: [
+    {
+      title: "Who we are?",
+      text: "We are a group of motivated designers and developers that want to make the design process easier and more accessible to everyone. Our objective is to deliver knowledge that we wish we had when we first started in the industry.",
+      img: teamWorkIllustration,
+      altImg: "Team Work Illustration",
+    },
+    {
+      title: "Focus",
+      text: "Our primary focus is UI/UX design and frontend programming, with an emphasis on style. We realize that design is about providing a seamless user experience that is both intuitive and efficient, not merely making things seem lovely. Our objective is to pass on our expertise and experience to others in order for them to become better designers and developers.",
+      img: Achievement_Monochromatic,
+      altImg: "Team Work Illustration",
+    },
+
+    {
+      title: "How?",
+      text: "We listen to our audience and develop material that suits their requirements as a community-based effort. We have something for everyone, whether you're a beginner or an advanced expert. Our material covers everything from fundamental design concepts to advanced approaches and tools, with an emphasis on current trends and best practices.",
+      img: FullInbox_Monochromatic,
+      altImg: "Team Work Illustration",
+    },
+    {
+      title: "More than a passion",
+      text: "We feel that design is more than a profession; it is a passion. We hope to encourage and motivate people to follow their creative goals, whether it's working as a freelancer, opening a design company, or simply developing their abilities. Our staff has years of industry expertise and is dedicated to sharing our knowledge with others.",
+      img: DataArranging_Monochromatic,
+      altImg: "Team Work Illustration",
+    },
+
+    {
+      title: "Upgrading everytime",
+      text: "We are regularly upgrading our information to reflect the most recent industry trends and advances. We also encourage input and recommendations from our audience, as we feel that cooperation and community are critical to development and success.",
+      img: Startup_Monochromatic,
+      altImg: "Team Work Illustration",
+    },
+  ],
+  disclaimer: "Thank you for being a member of our community!",
+};
+---
+
+<Layout navbarActive="about">
+  <div class="page page_about">
+    <h1 class="title">{content.title}</h1>
+    {
+      content.sections?.map((section) => {
+        return (
+          <section>
+            <div class="content">
+              <h2 class="subtitile">{section.title}</h2>
+              <p class="text">{section.text}</p>
+            </div>
+            <img src={section.img} alt={section.altImg} />
+          </section>
+        );
+      })
+    }
+    <h2 class="disclaimer">{content.disclaimer}</h2>
+  </div>
+</Layout>
