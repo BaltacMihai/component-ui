@@ -11,7 +11,7 @@ import CodeSnippet from "./partials/CodeSnippet/CodeSnippet.jsx";
 import "./partials/style.css";
 
 export const internalLinks = [
-  { link: "John", name: 25 },
+  { link: "John", name: "" },
   { link: "John", name: 25 },
   { link: "John", name: 25 },
 ];
@@ -19,7 +19,7 @@ export const internalLinks = [
 {/* Page Conent */}
 
 <section id={`#${internalLinks[0].link}`}>
-  <h2>Ceva Facut</h2>
+  <h2>{internalLinks[0].name}</h2
   <p>De facut</p>
 </section>
 ;

@@ -1,12 +1,12 @@
 a.link {
   color: #5d60ef;
   padding-bottom: 0.5px;
-  border-bottom: 2px solid #5d60ef;
 }
 
 a.link p {
   display: inline;
   border-bottom: 2px solid #5d60ef;
+  margin: 0 5px;
 }
 
 .content section {

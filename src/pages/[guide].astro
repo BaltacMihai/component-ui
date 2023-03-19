@@ -37,7 +37,7 @@ const { Content, frontmatter, internalLinks } = Astro.props.guide;
     <div class="content">
       <Content />
     </div>
-    <div class="aside">
+    <div class="aside" id="aside">
       <h2>Lesson Contents:</h2>
       {
         internalLinks?.map((section) => {
@@ -53,13 +53,7 @@ const { Content, frontmatter, internalLinks } = Astro.props.guide;
 </Layout>
 
 <script>
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-    const windowWidth =
-      window.innerWidth || document.documentElement.clientWidth;
-
+  function isInViewport(rect, windowHeight, windowWidth) {
     // Check if the top or bottom edge of the element is within the viewport
     const topVisible = rect.top >= 0 && rect.top <= windowHeight;
     const bottomVisible = rect.bottom >= 0 && rect.bottom <= windowHeight;
@@ -71,28 +65,47 @@ const { Content, frontmatter, internalLinks } = Astro.props.guide;
     return (topVisible || bottomVisible) && (leftVisible || rightVisible);
   }
 
-  function show(theId) {
-    const element = document.querySelector("#nav_" + theId);
-    const section = document.querySelector("#" + theId);
-
+  function show(theId, element, section, observer) {
     if (section && element) {
-      const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          element.classList.add("active");
-        } else {
-          element.classList.remove("active");
-        }
-      });
       observer.observe(section);
     }
   }
 
-  const ids = ["install", "compile", "cssfiles"];
+  const aside = document.querySelector("div.aside");
+  const anchors = Array.from(aside.querySelectorAll("a"));
+  const hrefs = anchors.map((a) => a.getAttribute("href"));
+  const ids = hrefs?.map((e) => e.slice(1, e.length));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const element = document.querySelector("#nav_" + entry.target.id);
+      if (element) {
+        if (
+          isInViewport(
+            entry.boundingClientRect,
+            window.innerHeight,
+            window.innerWidth
+          )
+        ) {
+          element.classList.add("active");
+        } else {
+          element.classList.remove("active");
+        }
+      }
+    });
+  });
+
+  ids.forEach((id) => {
+    const section = document.querySelector("#" + id);
+    if (section) {
+      show(id, document.querySelector("#nav_" + id), section, observer);
+    }
+  });
 
   document.addEventListener(
     "scroll",
     function () {
-      ids.forEach((one) => show(one));
+      observer.observe(aside);
     },
     {
       passive: true,
