@@ -1,4 +1,6 @@
 @use "./../base/variables.scss" as *;
+@use "./../base/response.scss" as *;
+
 .page_about {
   .title {
     font-size: $fs-title;
@@ -22,29 +24,56 @@
     &:nth-child(odd) {
       .content {
         order: 2;
+        @include tablet {
+          order: 0;
+        }
       }
       img {
         order: 1;
+        @include tablet {
+          flex: 0 0 100%;
+        }
       }
     }
 
     .content {
       flex: 0 0 60%;
+
+      @include tablet {
+        flex: 0 0 100%;
+        margin-bottom: 2rem;
+      }
+
       .subtitile {
         font-size: $fs-subtitle;
         color: $cl-primary;
         padding-bottom: 2rem;
+
+        @include tablet {
+          margin: 0 2rem;
+        }
       }
       .text {
         font-size: $fs-content;
+        @include tablet {
+          margin: 0 2rem;
+        }
       }
     }
     img {
       flex: 0 0 30%;
+
+      @include tablet {
+        flex: 0 0 100%;
+      }
     }
   }
 
   .disclaimer {
     margin-bottom: 5rem;
+    @include tablet {
+      margin: 0 2rem;
+      padding-bottom: 2rem;
+    }
   }
 }
