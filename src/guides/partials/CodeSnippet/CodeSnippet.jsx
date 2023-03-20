@@ -45,6 +45,7 @@ function CodeSnippet({ content, lang }) {
         src={clipboardIcon}
         alt="Clipboard Icon"
         style={style.copyIcon}
+        className="icon"
         onClick={() => {
           navigator.clipboard.writeText(content);
           toast("Copied!");
