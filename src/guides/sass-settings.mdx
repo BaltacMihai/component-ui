@@ -8,7 +8,7 @@ icon: sass-settings.svg
 path: Sass
 ---
 
-import CodeSnippet from "./partials/CodeSnippet/CodeSnippet.jsx";
+import CodeSnippet from "./partials/CodeSnippet/CodeSnippet.astro";
 import Footer from "./partials/Footer/Footer.jsx";
 import "./partials/style.css";
 
@@ -40,8 +40,7 @@ export const internalLinks = [
   <CodeSnippet
     content="node -v; 
     npm -v;"
-    lang="bash"
-    client:load="react"
+    lang="nginx"
   />
   <p>
     If you don't already have them, you may get them here:
@@ -57,7 +56,7 @@ export const internalLinks = [
       follows:
     </p>
   </p>
-  <CodeSnippet content={"npm i sass;"} lang="bash" client:load="react" />
+  <CodeSnippet content={"npm i sass;"} lang="nginx" />
   <i>
     <b>Note: </b>The only disadvantage of using this method is that certain
     frameworks can compile your Sass files in their own way, so you must install
@@ -90,8 +89,7 @@ export const internalLinks = [
       content={
         "sass source/stylesheets/index.scss build/stylesheets/index.css;"
       }
-      lang="bash"
-      client:load="react"
+      lang="scss"
     />
     <i>
       <b>Note: </b>
@@ -135,8 +133,7 @@ export const internalLinks = [
     </p>
     <CodeSnippet
       content="sass --watch source/stylesheets/index.scss build/stylesheets/index.css;"
-      lang="bash"
-      client:load="react"
+      lang="scss"
     />
   </div>
   <div class="mt-1">
@@ -189,8 +186,7 @@ export const internalLinks = [
   <CodeSnippet
     content="sass [file-name].scss [file-name].min.css --style compressed
      "
-    lang="bash"
-    client:load="react"
+    lang="scss"
   />
   <p>
     By doing this, a minified CSS file called styles.min.css will be created,
@@ -265,8 +261,7 @@ export const internalLinks = [
     content={
       "sass --watch sass/[file-name].scss:css/[file-name].css --watch scss/[file-name].scss:css/[file-name].min.css --style compressed"
     }
-    lang="bash"
-    client:load="react"
+    lang="scss"
   />
   <h3>Not a solution.</h3>
   <p>
